@@ -56,3 +56,7 @@ pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
+
+
+# Neo4j
+target/NEODB

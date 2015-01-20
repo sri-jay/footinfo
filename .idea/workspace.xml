@@ -2,102 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7229d4b-a210-4daf-a02d-4e3167890e1f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/FootDB$Labels.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/FootDB$Relationships.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/schema/label/lucene/_1.cfs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/index/lucene-store.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/index/lucene.log.1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/index/lucene.log.active" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/index/lucene.log.v0" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.names.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.names" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.labels.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.labels" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.arrays.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.arrays" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.keys.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.keys" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.strings.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshipgroupstore.db.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshipgroupstore.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshipstore.db.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshipstore.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.names.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.names" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.schemastore.db.id" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore.schemastore.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neostore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/nioneo_logical.log.1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/nioneo_logical.log.active" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/nioneo_logical.log.v0" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/rrd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/schema/label/lucene/segments.gen" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/schema/label/lucene/segments_2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/store_lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/tm_tx_log.1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/schema/label/lucene/write.lock" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_lucene_lucene_core_3_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_neo4j_neo4j_lucene_index_2_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/active_tx_log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/messages.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/NEODB/neo4j.properties" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB$Relationsips.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\messages.log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.labeltokenstore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.labeltokenstore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.labeltokenstore.db.names" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.labeltokenstore.db.names.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.nodestore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.nodestore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.nodestore.db.labels" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.nodestore.db.labels.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.arrays" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.arrays.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.index" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.index.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.index.keys" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.index.keys.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.strings" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.propertystore.db.strings.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.relationshipgroupstore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.relationshipgroupstore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.relationshipstore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.relationshipstore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.relationshiptypestore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.relationshiptypestore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.relationshiptypestore.db.names" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.relationshiptypestore.db.names.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.schemastore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\neostore.schemastore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\neo-db\store_lock" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/FootDB.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/FootDB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2015-01-20" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2015-01-20" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footinfo.iml" afterPath="$PROJECT_DIR$/footinfo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="footinfo.iws" />
@@ -173,8 +78,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91457283" vertical-offset="622" max-vertical-offset="1088">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.91457283" vertical-offset="673" max-vertical-offset="1139">
+              <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -307,6 +212,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="footinfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="footinfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="footinfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -739,8 +658,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91457283" vertical-offset="622" max-vertical-offset="1088">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.91457283" vertical-offset="673" max-vertical-offset="1139">
+          <caret line="61" column="12" selection-start-line="61" selection-start-column="12" selection-end-line="61" selection-end-column="12" />
           <folding />
         </state>
       </provider>
