@@ -89,3 +89,10 @@
 127.0.0.1 - - [01/Jan/1970:05:29:59 +0530] "-" 400 - null 0
 127.0.0.1 - - [20/Jan/2015:14:43:01 +0530] "GET /jersey/v1/api/post HTTP/1.1" 405 1013 http-bio-8080-exec-5 3
 127.0.0.1 - - [20/Jan/2015:14:43:15 +0530] "POST /jersey/v1/api/post HTTP/1.1" 500 4474 http-bio-8080-exec-5 21
+127.0.0.1 - - [20/Jan/2015:15:38:21 +0530] "POST /jersey/v1/api/post HTTP/1.1" 500 15869 http-bio-8080-exec-1 6429
+127.0.0.1 - - [20/Jan/2015:15:40:38 +0530] "POST /jersey/v1/api/post HTTP/1.1" 200 37 http-bio-8080-exec-1 1005
+127.0.0.1 - - [20/Jan/2015:15:44:32 +0530] "POST /jersey/v1/api/post HTTP/1.1" 500 15869 http-bio-8080-exec-1 7231
+127.0.0.1 - - [20/Jan/2015:15:45:16 +0530] "POST /jersey/v1/api/post HTTP/1.1" 200 37 http-bio-8080-exec-1 1297
+127.0.0.1 - - [20/Jan/2015:15:48:07 +0530] "POST /jersey/v1/api/post HTTP/1.1" 500 15869 http-bio-8080-exec-1 5959
+127.0.0.1 - - [20/Jan/2015:15:48:16 +0530] "POST /jersey/v1/api/post HTTP/1.1" 500 15869 http-bio-8080-exec-2 4701
+127.0.0.1 - - [20/Jan/2015:15:49:46 +0530] "POST /jersey/v1/api/post HTTP/1.1" 500 15869 http-bio-8080-exec-3 4961

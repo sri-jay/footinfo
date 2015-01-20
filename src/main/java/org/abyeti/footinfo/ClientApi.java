@@ -12,9 +12,11 @@ public class ClientApi {
     @Path("/post")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response adminLogin(String entString) throws Exception {
+    public Response adminLogin(String entString) {
         System.out.println(entString);
         JSONObject jsonData = new JSONObject(entString);
+
+        new FootDB();
         return Response
             .status(200)
             .entity(jsonData.toString())
