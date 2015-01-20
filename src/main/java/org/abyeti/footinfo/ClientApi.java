@@ -9,17 +9,19 @@ import javax.ws.rs.core.Response;
 @Path("/api")
 public class ClientApi {
     @POST
-    @Path("/post")
+    @Path("/addTeam")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response adminLogin(String entString) {
         System.out.println(entString);
         JSONObject jsonData = new JSONObject(entString);
 
-        new FootDB();
-        return Response
-            .status(200)
-            .entity(jsonData.toString())
-            .build();
+        FootDB db = new FootDB();
+        if(jsonData.getString("ACTION").equals("ADD_TEAM")) {
+            String teamName = jsonData.getString("TEAM_NAME");
+            String[] players = jsonData.getString("PLAYERS").split(";");
+            db.addTeam(teamName, players);
+        }
+        return Response.ok().entity("{'potato' : 'veg3t4b3l'}").build();
     }
 }

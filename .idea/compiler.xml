@@ -25,5 +25,8 @@
         <module name="footinfo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="footinfo" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>
