@@ -1,0 +1,62 @@
+<div class="ui segment">
+	<h1 class="black ui dividing header">{{ announcement }}</h1>
+	<div class="ui segment">
+		<h1 class="ui green dividing header">Match Status</h1>
+		<div class="ui fluid transparent icon input">
+			<input ng-model="searchText" type="text" placeholder="Search...">
+			<i class="search icon"></i>
+		</div>
+		<table class="ui green table">
+			<thead>
+				<th>Match ID</th>
+				<th>Participant A</th>
+				<th>Participant B</th>
+				<th>Start Time</th>
+				<th>Status</th>
+				<th>End Match</th>
+			</thead>
+			<tbody>
+				<tr ng-repeat="gstat in gameStatus | filter:searchText	" >
+					<td>{{ gstat.match_id }}</td>
+					<td>{{ gstat.match_participant_a }}</td>
+					<td>{{ gstat.match_participant_b }}</td>
+					<td>{{ gstat.start_time }}</td>
+					<td class="match-status">{{ gstat.match_status }}</td>
+					<td>
+						<div class="ui animated inverted red button" ng-click="finishMatch($event,gstat.match_id)">						
+							<div class="visible content">Finish</div>
+							<div class="hidden content"><i class="sign out icon"></i></div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<button ng-click="getGameStatuses()" class="fluid ui massive inverted green button">Update</button>
+	</div>
+
+	<br>			
+	<hr>
+	<br>
+
+	<div class="ui segment">
+		<form class="ui basic form" ng-submit="createGame()">
+			<h1 class="ui teal dividing header">Create Match</h1>
+			<div class="two fields">
+		    	<div class="field">
+		    		<div class="ui massive icon input">
+		    			<input type="text" ng-model="teamA" required>
+		    			<i class="flag icon"></i>
+		    		</div>
+		    	</div>
+		    	<div class="field">
+		    		<div class="ui massive icon input">
+		    			<input type="text" ng-model="teamB" required>
+		    			<i class="user icon"></i>
+		    		</div>
+		    	</div>
+			</div>
+			<button class="fluid ui massive teal inverted button">Create Match</button>
+		</form>
+	</div>
+</div>

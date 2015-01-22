@@ -1,0 +1,55 @@
+body {
+	margin:0;
+	background: white!important;
+}
+
+.container {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top:5.5vh;
+}
+
+
+#background {
+	top:-100px;
+	left:-90px;
+	width:120%;
+	position: absolute;
+	-webkit-animation: toBright 3s linear;
+	-webkit-animation-fill-mode: forwards;
+	overflow: hide;
+}
+
+.semi-transparent {
+	opacity:0.7;
+}
+
+@-webkit-keyframes toBright {
+	from {
+		-webkit-filter: brightness(0.5) contrast(1.2);
+	}
+	to {
+		-webkit-filter: brightness(0.8) contrast(1.6);
+	}
+}
+
+.mainview-animation.ng-enter {
+  transition: .3s ease-in all;
+}
+
+/**
+ * Pre animation -> enter
+ */
+.mainview-animation.ng-enter{
+  /* The animation preparation code */
+  opacity: 0;
+}
+
+/**
+ * Post animation -> enter
+ */
+.mainview-animation.ng-enter.ng-enter-active { 
+  /* The animation code itself */
+  opacity: 1;
+}

@@ -4,9 +4,10 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 import org.apache.http.client.utils.URIBuilder;
+import org.joda.time.DateTime;
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
+
 import org.neo4j.graphdb.RelationshipType;
 
 import javax.ws.rs.core.MediaType;
@@ -129,7 +130,7 @@ public class FootDB {
         URI teamNode = createNode();
 
         Map<String, String> data = new TreeMap<>();
-        data.put("TEAM-NAME", teamName);
+        data.put("team_name", teamName);
 
         addPropertyToNode(teamNode, data);
         try{
@@ -142,7 +143,7 @@ public class FootDB {
         for(String player : players){
             URI playerNode = createNode();
             Map<String, String> playerData = new TreeMap<String, String>();
-            playerData.put("NAME", player);
+            playerData.put("name", player);
 
             addPropertyToNode(playerNode, playerData);
             try {
@@ -167,8 +168,8 @@ public class FootDB {
         tB = new StringBuilder("\"").append(tB).append("\"").toString();
 
         try {
-            URI getTeamAURI = new URI(new URIBuilder(GET_TEAM_BY_LABEL_AND_NAME).addParameter("TEAM-NAME", tA).toString());
-            URI getTeamBURI = new URI(new URIBuilder(GET_TEAM_BY_LABEL_AND_NAME).addParameter("TEAM-NAME", tB).toString());
+            URI getTeamAURI = new URI(new URIBuilder(GET_TEAM_BY_LABEL_AND_NAME).addParameter("team_name", tA).toString());
+            URI getTeamBURI = new URI(new URIBuilder(GET_TEAM_BY_LABEL_AND_NAME).addParameter("team_name", tB).toString());
 
             System.out.println(getTeamAURI.toString());
             res = Client.create().resource(getTeamAURI);
@@ -201,7 +202,12 @@ public class FootDB {
             URI nodeB = new URI(teamBData.getString("self"));
 
             // The Relation between teams A and B is now A vs B, i.e the match is ongoing
-            addRelationship(nodeA, nodeB, Relationships.VERSUS, new JSONObject().append("UNIQUE-ID", UUID.randomUUID().toString()).toString());
+            addRelationship(nodeA, nodeB, Relationships.VERSUS, new JSONObject()
+                            .append("match_id", UUID.randomUUID().toString())
+                            .append("match_status", "ongoing")
+                            .append("start_time", new DateTime().toString())
+                            .toString()
+            );
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -209,5 +215,100 @@ public class FootDB {
         }
 
         return status;
+    }
+
+    JSONArray getGameStatuses() {
+        JSONArray gameStatuses = new JSONArray();
+
+        final String cipherQuery = "{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) return a,b,r\" }]}";
+
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON_TYPE)
+                .entity(cipherQuery)
+                .type(MediaType.APPLICATION_JSON_TYPE)
+                .post(ClientResponse.class);
+
+        JSONArray jsonDump = new JSONObject(response.getEntity(String.class)).getJSONArray("results").getJSONObject(0).getJSONArray("data");
+
+        for(int i=0;i<jsonDump.length();i++) {
+            JSONArray row = jsonDump.getJSONObject(i).getJSONArray("row");
+            JSONArray matchId = row.getJSONObject(2).getJSONArray("match_id");
+            JSONArray matchStatus = row.getJSONObject(2).getJSONArray("match_status");
+            JSONArray matchStartTime = row.getJSONObject(2).getJSONArray("start_time");
+
+            if(matchStatus.getString(0).equals("ongoing")) {
+                JSONObject dat = new JSONObject()
+                        .accumulate("match_participant_a", row.getJSONObject(0).getString("team_name"))
+                        .accumulate("match_participant_b", row.getJSONObject(1).getString("team_name"))
+                        .accumulate("match_id", matchId.getString(0))
+                        .accumulate("start_time", matchStartTime.getString(0))
+                        .accumulate("match_status", matchStatus.getString(0));
+                gameStatuses.put(dat);
+            }
+        }
+        System.out.println(gameStatuses.toString());
+        return gameStatuses;
+    }
+
+    JSONArray getAllPlayers() {
+        JSONArray players = new JSONArray();
+
+        final String cipherQuery = "{ \"statements\" : [{ \"statement\" : \"match (a)-[r:PLAYS_FOR]->(b) return a,b\"}] }";
+
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .entity(cipherQuery)
+                .type(MediaType.APPLICATION_JSON)
+                .post(ClientResponse.class);
+
+        JSONArray jsonDump = new JSONObject(response.getEntity(String.class)).getJSONArray("results").getJSONObject(0).getJSONArray("data");
+
+        System.out.println(jsonDump.toString());
+        for(int i=0;i<jsonDump.length();i++) {
+            JSONArray row = jsonDump.getJSONObject(i).getJSONArray("row");
+            JSONObject dat = new JSONObject()
+                    .accumulate("player_name", row.getJSONObject(0).getString("name"))
+                    .accumulate("club_name", row.getJSONObject(1).getString("team_name"));
+
+            players.put(dat);
+        }
+
+        return players;
+    }
+
+    boolean stopGame(String matchId) {
+        final String cipherQuery = String.format("{\"statements\" : [{\"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return id(r)\"}] }", matchId);
+
+        System.out.println(cipherQuery);
+
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(cipherQuery)
+                .post(ClientResponse.class);
+
+        String data = response.getEntity(String.class);
+
+        int id = new JSONObject(data).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row").getInt(0);
+
+        final String finishGame = String.format("http://localhost:7474/db/data/relationship/%d/properties/match_status", id);
+
+        res = Client.create().resource(finishGame);
+        response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .entity("[\"finished\"]")
+                .put(ClientResponse.class);
+
+        if(response.getStatus() == 204){
+            return true;
+        }
+
+        return false;
     }
 }
