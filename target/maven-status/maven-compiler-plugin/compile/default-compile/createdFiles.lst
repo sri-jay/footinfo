@@ -1,4 +1,4 @@
-org\abyeti\footinfo\FootDB$Labels.class
 org\abyeti\footinfo\FootDB$Relationships.class
 org\abyeti\footinfo\ClientApi.class
+org\abyeti\footinfo\FootDB$NodeLabels.class
 org\abyeti\footinfo\FootDB.class

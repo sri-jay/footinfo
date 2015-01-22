@@ -3,28 +3,82 @@
 <head>
     <title>Footinfo</title>
 
-    <!--Bootstrap CSS-->
+    <!--CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.7.3/semantic.min.css"/>
-    
+    <link rel="stylesheet" href="styles/styles.css"/>
+
     <!--jQuery-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<!--Semantic UI -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.7.3/semantic.min.js"></script>
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.3.3/sweet-alert.min.css"/>
+</head>
+<body ng-app="footinfo">
+	<div class="container">
+		<div class="ui fixed fluid two rounded item main menu" id="dash-topbar">
+			<div class="item">			
+				<b>Admin Panel</b>
+			</div>		
+			<div class="item">
+				<a href="https://droid-api-staging.herokuapp.com/logout">Logout</a>
+			</div>
+		</div>
+		<div ng-controller="adminController">
+			<div class="ui segment">
+				<div class="ui segment">
+				    <form class="ui basic form" >
+				    	<h1 class="ui red dividing header">Add team</h1>
+				    	<div class="field">
+				    		<div class="ui massive icon input">
+				    			<input type="text" ng-model="teamName" required>
+				    			<i class="flag icon"></i>
+				    		</div>
+				    	</div>
+				    	<div class="field">
+				    		<div class="ui massive icon input">
+				    			<input type="text" ng-model="players" required>
+				    			<i class="user icon"></i>
+				    		</div>
+				    	</div>
+				    	<button ng-click="addTeam()" class="fluid ui massive red inverted button">Add team</button>
+				    </form>
+			  	</div>
 
+			  	<br>			
+			    <hr>
+			    <br>
+
+			    <div class="ui segment">
+				    <form class="ui basic form" >
+				    	<h1 class="ui teal dividing header">Create Match</h1>
+				    	<div class="two fields">
+					    	<div class="field">
+					    		<div class="ui massive icon input">
+					    			<input type="text" ng-model="teamA" required>
+					    			<i class="flag icon"></i>
+					    		</div>
+					    	</div>
+					    	<div class="field">
+					    		<div class="ui massive icon input">
+					    			<input type="text" ng-model="teamB" required>
+					    			<i class="user icon"></i>
+					    		</div>
+					    	</div>
+				    	</div>
+				    	<button ng-click="createGame()" class="fluid ui massive teal inverted button">Create Match</button>
+				    </form>
+			    </div>
+		    </div>
+		</div>
+	</div>
+<!--Scripts-->
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>	
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.3.3/sweet-alert.min.js"></script>
+
 	<script src="scripts/controllers.js"></script>
-</head>
-<body ng-app="footinfo">
-	<div ng-controller="sampleController">
-	    <ol ng-repeat="dat in data">
-	        <li>{{ dat.band }}</li>
-	    </ol>
-	</div>
-<!--Scripts-->
-
-<!--AngularJS-->
-
+	<script src="scripts/admin-scripts.js"></script>
 </body>
 </html>

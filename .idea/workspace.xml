@@ -3,44 +3,66 @@
   <component name="ChangeListManager">
     <list default="true" id="d7229d4b-a210-4daf-a02d-4e3167890e1f" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\webapp\index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\active_tx_log" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\index\lucene-store.db" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\index\lucene.log.1" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\index\lucene.log.active" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\index\lucene.log.v0" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\lock" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\messages.log" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neo4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.labeltokenstore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.labeltokenstore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.labeltokenstore.db.names" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.labeltokenstore.db.names.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.nodestore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.nodestore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.nodestore.db.labels" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.nodestore.db.labels.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.arrays" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.arrays.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.index" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.index.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.index.keys" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.index.keys.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.strings" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.propertystore.db.strings.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.relationshipgroupstore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.relationshipgroupstore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.relationshipstore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.relationshipstore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.relationshiptypestore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.relationshiptypestore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.relationshiptypestore.db.names" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.relationshiptypestore.db.names.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.schemastore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\neostore.schemastore.db.id" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\nioneo_logical.log.1" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\nioneo_logical.log.active" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\nioneo_logical.log.v0" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\rrd" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\schema\label\lucene\_1.cfs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\schema\label\lucene\segments.gen" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\schema\label\lucene\segments_2" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\schema\label\lucene\write.lock" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/index/lucene-store.db" afterPath="$PROJECT_DIR$/target/NEODB/index/lucene-store.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/index/lucene.log.active" afterPath="$PROJECT_DIR$/target/NEODB/index/lucene.log.active" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.names.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.names.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.names" afterPath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db.names" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db" afterPath="$PROJECT_DIR$/target/NEODB/neostore.labeltokenstore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.labels.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.labels.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.labels" afterPath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db.labels" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db" afterPath="$PROJECT_DIR$/target/NEODB/neostore.nodestore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.arrays.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.arrays.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.arrays" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.arrays" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.keys.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.keys.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.keys" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index.keys" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.index" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.strings.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.strings.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.strings" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db.strings" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db" afterPath="$PROJECT_DIR$/target/NEODB/neostore.propertystore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.relationshipgroupstore.db.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshipgroupstore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.relationshipgroupstore.db" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshipgroupstore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.relationshipstore.db.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshipstore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.relationshipstore.db" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshipstore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.names.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.names.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.names" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db.names" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db" afterPath="$PROJECT_DIR$/target/NEODB/neostore.relationshiptypestore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.schemastore.db.id" afterPath="$PROJECT_DIR$/target/NEODB/neostore.schemastore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore.schemastore.db" afterPath="$PROJECT_DIR$/target/NEODB/neostore.schemastore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/neostore" afterPath="$PROJECT_DIR$/target/NEODB/neostore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/nioneo_logical.log.active" afterPath="$PROJECT_DIR$/target/NEODB/nioneo_logical.log.active" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/NEODB/tm_tx_log.1" afterPath="$PROJECT_DIR$/target/NEODB/tm_tx_log.1" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\store_lock" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\tm_tx_log.1" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB$Labels.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/FootDB$Relationships.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/FootDB$Relationships.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/FootDB.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/FootDB.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/scripts/controllers.js" afterPath="$PROJECT_DIR$/src/main/webapp/scripts/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footinfo.iml" afterPath="$PROJECT_DIR$/footinfo.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="footinfo.iws" />
@@ -70,28 +92,28 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1173">
-              <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1560">
+              <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62017167" vertical-offset="0" max-vertical-offset="466">
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="375">
               <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="544">
-              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state vertical-scroll-proportion="1.0261323" vertical-offset="41" max-vertical-offset="1155">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,13 +124,31 @@
       <file leaf-file-name="FootDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="646">
-              <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="765">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#249#250#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
+                <element signature="class#Relationships#0;class#FootDB#0" expanded="false" />
+                <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
+                <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
+                <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
+                <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
+                <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
+                <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
+                <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
+                <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
+                <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="queries" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/queries">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="135">
+              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,7 +156,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.44" vertical-offset="347" max-vertical-offset="1139">
+            <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1005">
               <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding />
             </state>
@@ -125,14 +165,14 @@
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
               <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
           </provider>
         </entry>
       </file>
@@ -149,11 +189,12 @@
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootinfoAPi.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootinfoApii.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/.idea/queries" />
+        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -174,6 +215,10 @@
         <PATH_ELEMENT>
           <option name="myItemId" value="footinfo-backend" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Dependencies" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
         </PATH_ELEMENT>
       </PATH>
       <PATH>
@@ -208,6 +253,16 @@
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$PluginNode" />
         </PATH_ELEMENT>
       </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="footinfo-backend" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
@@ -237,7 +292,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -273,10 +327,6 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -295,10 +345,19 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="footinfo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -309,10 +368,10 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.5178366" />
-    <property name="options.lastSelected" value="MavenSettings" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FullScreen" value="false" />
@@ -539,12 +598,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25377643" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2246596" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2723343" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35302594" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13753581" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35182482" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1336858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21633889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -575,10 +634,85 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="653" max-vertical-offset="1440">
+          <caret line="55" column="20" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="375">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="694" max-vertical-offset="1065">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="class#Relationships#0;class#FootDB#0" expanded="false" />
+            <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
+            <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/queries">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="135">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1005">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="180">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1173">
@@ -611,8 +745,16 @@
           <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
+            <element signature="class#Relationships#0;class#FootDB#0" expanded="false" />
+            <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
+            <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -626,14 +768,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="204">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -668,8 +810,16 @@
           <caret line="26" column="51" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
+            <element signature="class#Relationships#0;class#FootDB#0" expanded="false" />
+            <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
+            <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -735,59 +885,75 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="1005">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/queries">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="135">
+          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="1173">
-          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="658" max-vertical-offset="1560">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
-          <caret line="29" column="25" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="69" max-vertical-offset="765">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
+            <element signature="class#Relationships#0;class#FootDB#0" expanded="false" />
+            <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
+            <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.44" vertical-offset="347" max-vertical-offset="1139">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="544">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state vertical-scroll-proportion="1.0261323" vertical-offset="41" max-vertical-offset="1155">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62017167" vertical-offset="0" max-vertical-offset="466">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
