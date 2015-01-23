@@ -76,6 +76,13 @@ footinfo.factory("apiFactory",['$http', function($http){
         });
     };
 
+    factory.getGameData = function (match_id) {
+        return $http({
+            method: 'POST',
+            url: 'http://localhost:8080/footinfo/v1/api/getGameData',
+            data: {"match_id" : match_id}
+        });
+    }
     return factory;
 }]);
 
@@ -189,5 +196,10 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope, $rout
     $scope.participant_a = $routeParams.participant_a;
     $scope.participant_b = $routeParams.participant_b;
 
+    apiFactory.getGameData($routeParams.match_id).success(function (response){
+            $log.log(response);
+            $scope.team_a = response.team_a[0];
+            $scope.team_b = response.team_b[0];
+    });
 
 });

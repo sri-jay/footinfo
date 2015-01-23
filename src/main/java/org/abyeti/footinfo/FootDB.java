@@ -128,7 +128,7 @@ public class FootDB {
 
     // Football functions
 
-    void addTeam(String teamName, String[] players) {
+    void addTeam(String teamName, String[] players) throws Exception {
         URI teamNode = createNode();
 
         Map<String, String> data = new TreeMap<>();
@@ -160,7 +160,7 @@ public class FootDB {
         }
     }
 
-    boolean createGame(String tA, String tB) {
+    boolean createGame(String tA, String tB) throws Exception {
         boolean status = true;
 
         WebResource res = null;
@@ -221,7 +221,7 @@ public class FootDB {
         return status;
     }
 
-    JSONArray getGameStatuses() {
+    JSONArray getGameStatuses() throws Exception {
         JSONArray gameStatuses = new JSONArray();
 
         final String cipherQuery = "{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) return a,b,r\" }]}";
@@ -255,7 +255,7 @@ public class FootDB {
         return gameStatuses;
     }
 
-    JSONArray getTeamData(String teamId) {
+    JSONArray getTeamData(String teamId) throws Exception {
         JSONArray players = new JSONArray();
 
         final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:PLAYS_FOR]->(b) where b.team_id=\'%s\' return a,b\"}] }", teamId);
@@ -285,7 +285,7 @@ public class FootDB {
         return players;
     }
 
-    JSONArray getAllClubs() {
+    JSONArray getAllClubs() throws Exception {
         JSONArray clubs = new JSONArray();
 
         final String cipherQuery = "{ \"statements\" : [{ \"statement\" : \"match (a)-[r:PLAYS_FOR]->(b) return distinct b\"}] }";
@@ -311,7 +311,7 @@ public class FootDB {
         return clubs;
     }
 
-    boolean stopGame(String matchId) {
+    boolean stopGame(String matchId) throws Exception {
         final String cipherQuery = String.format("{\"statements\" : [{\"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return id(r)\"}] }", matchId);
 
         System.out.println(cipherQuery);
@@ -344,8 +344,8 @@ public class FootDB {
         return false;
     }
 
-    JSONArray getGameData(String matchId) {
-        final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=\'%s\' return a.team_id,b.team_id \" }] }", matchId);
+    JSONObject getGameData(String matchId) throws Exception {
+        final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return a.team_id,b.team_id \" }] }", matchId);
         WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
         ClientResponse response = res
                 .accept(MediaType.APPLICATION_JSON)
@@ -353,8 +353,14 @@ public class FootDB {
                 .entity(cipherQuery)
                 .post(ClientResponse.class);
 
-        String data = response.getEntity(String.class);
-        System.out.println(data);
-        return null;
+        JSONArray row  = new JSONObject(response.getEntity(String.class)).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row");
+
+        JSONArray teamAData = getTeamData(row.getString(0));
+        JSONArray teamBData = getTeamData(row.getString(1));
+
+        JSONObject data = new JSONObject().accumulate("team_a", teamAData).accumulate("team_b", teamBData).accumulate("status", "succeeded");
+
+        System.out.println(data.toString());
+        return data;
     }
 }

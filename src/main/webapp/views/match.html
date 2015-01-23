@@ -1,14 +1,14 @@
 <div class="ui segment">
-	<h1>{{participant_a}} vs. {{particpant_b}} / {{ match_id }}</h1>
-	<table class="ui basic table">
+	<h1 class="ui green dividing header">{{participant_a}} vs. {{participant_b}} / {{ match_id }}</h1>
+	<table class="ui green table">
 		<thead>
 			<th>{{participant_a}}</th>
 			<th>{{participant_b}}</th>
 		</thead>
 		<tbody>
 			<tr ng-repeat="player in  team_a">
-				<td>{{player.player_name}}</td>
-				<td>{{team_b[$index].player_name}}</td>
+				<a><td class="team-a">{{player.player_name}}</td></a>
+				<a><td class="team-b">{{team_b[$index].player_name}}</td></a>
 			</tr>
 		</tbody>
 	</table>

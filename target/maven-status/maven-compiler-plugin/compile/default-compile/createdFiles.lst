@@ -5,6 +5,7 @@ org\abyeti\footinfo\ApiDataModels$GetTeam.class
 org\abyeti\footinfo\ClientApi.class
 org\abyeti\footinfo\FootDB$NodeLabels.class
 org\abyeti\footinfo\ApiDataModels$AddTeamModel.class
+org\abyeti\footinfo\ApiDataModels$GameData.class
 org\abyeti\footinfo\ApiDataModels.class
 org\abyeti\footinfo\FootDB.class
 org\abyeti\footinfo\ApiDataModels$FinishGameModel.class

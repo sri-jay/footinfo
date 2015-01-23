@@ -70,3 +70,13 @@ body {
 {
    background: white;
 }
+
+.team-a:hover {
+	background-color: LimeGreen;
+	color: white;
+}
+
+.team-b:hover {
+	background-color: OrangeRed;
+	color: white;
+}

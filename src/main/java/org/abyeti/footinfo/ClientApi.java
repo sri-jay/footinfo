@@ -155,10 +155,19 @@ public class ClientApi {
     }
 
     @POST
-    @Path("/getGameDetails")
+    @Path("/getGameData")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response getGameDetails(ApiDataModels.GameData gameId) {
-        return null;
+    public Response getGameData(ApiDataModels.GameData game) {
+        Response res = null;
+        try {
+            FootDB db = new FootDB();
+            res = Response.status(200).entity(db.getGameData(game.match_id).toString()).build();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            res = Response.status(500).entity("{\"status\" : \"failed\"}").build();
+        }
+        return res;
     }
 }
