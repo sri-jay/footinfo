@@ -21,10 +21,9 @@ footinfo.factory("apiFactory",['$http', function($http){
             method: 'POST',
             url: "http://localhost:8080/footinfo/v1/api/addTeam",
             headers: {"Content-Type" : "application/json"},
-            data: {
-                "ACTION" : "ADD_TEAM",
-                "TEAM_NAME": teamData.teamName,
-                "PLAYERS": teamData.players
+            data: {                
+                "team_name": teamData.teamName,
+                "players": teamData.players
             }
         });
     };

@@ -1,9 +1,7 @@
 package org.abyeti.footinfo;
 
 import org.json.JSONObject;
-import scala.util.parsing.json.JSON;
 
-import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -15,17 +13,14 @@ public class ClientApi {
     @Path("/addTeam")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response adminLogin(String entString) {
-        JSONObject jsonData = new JSONObject(entString);
+    public Response adminLogin(ApiDataModels.AddTeamModel teamData) {
         Response resp = null;
         try {
             FootDB db = new FootDB();
-            if (jsonData.getString("ACTION").equals("ADD_TEAM")) {
-                String teamName = jsonData.getString("TEAM_NAME");
-                String[] players = jsonData.getString("PLAYERS").split(";");
-                db.addTeam(teamName, players);
-                resp = Response.status(200).entity("{\"STATUS\" : \"SUCCEEDED\"}").build();
-            }
+
+            db.addTeam(teamData.team_name, teamData.players.split(";"));
+            resp = Response.status(200).entity("{\"STATUS\" : \"SUCCEEDED\"}").build();
+
         }
         catch (Exception e){
             e.printStackTrace();
@@ -39,8 +34,7 @@ public class ClientApi {
     @Path("/createGame")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response createGame(String entString) {
-        JSONObject jsonData = new JSONObject(entString);
+    public Response createGame(ApiDataModels.CreateGameModel gameData) {
         JSONObject responseData = new JSONObject();
 
         Response response = Response
@@ -49,12 +43,9 @@ public class ClientApi {
                 .build();
 
 
-        String teamA = jsonData.getString("TEAM_A");
-        String teamB = jsonData.getString("TEAM_B");
-
         try {
             FootDB db = new FootDB();
-            if(!db.createGame(teamA, teamB)) {
+            if(!db.createGame(gameData.teamA, gameData.teamB)) {
                 Response
                         .status(404)
                         .entity(responseData.append("STATUS", "No Such Team!").toString())
@@ -124,12 +115,11 @@ public class ClientApi {
     @Path("/finishGame")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response stopGame(String entString) {
-        JSONObject matchId = new JSONObject(entString);
+    public Response stopGame(ApiDataModels.FinishGameModel gameData) {
         Response resp = null;
         try {
             FootDB db = new FootDB();
-            if(db.stopGame(matchId.getString("match_id"))) {
+            if(db.stopGame(gameData.matchId)) {
                 resp = Response.status(200).entity("{\"status\" : \"succeeded\" }").build();
             }
             else
@@ -139,7 +129,6 @@ public class ClientApi {
             e.printStackTrace();
             resp = Response.status(500).entity("{\"status\" : \"failed\" }").build();
         }
-
         return resp;
     }
 }
