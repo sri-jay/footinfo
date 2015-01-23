@@ -8,8 +8,9 @@ footinfo.config(['$routeProvider', function ($routeProvider){
     .when("/b", {
         controller: "matchController",
         templateUrl: "views/match.html"
-    }).otherwise({
-        rediredctTo:"/"
+    })
+    .when("/", {
+        redirectTo: "/b"
     });
 }]);
 
@@ -139,6 +140,7 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope){
             $event.target.classList.add("disabled");
             $event.target.classList.remove("red");
             $event.target.classList.remove("inverted");
+            $event.target.classList.remove("animated");
             $event.target.innerHTML = "Finished";
             $event.target.parentNode.parentNode.getElementsByClassName("match-status")[0].innerHTML = "finished";
         }

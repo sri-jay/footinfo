@@ -23,10 +23,7 @@
 					<td>{{ gstat.start_time }}</td>
 					<td class="match-status">{{ gstat.match_status }}</td>
 					<td>
-						<div class="ui animated inverted red button" ng-click="finishMatch($event,gstat.match_id)">						
-							<div class="visible content">Finish</div>
-							<div class="hidden content"><i class="sign out icon"></i></div>
-						</div>
+						<button class="ui inverted red button" ng-click="finishMatch($event,gstat.match_id)">Finish</button>
 					</td>
 				</tr>
 			</tbody>
