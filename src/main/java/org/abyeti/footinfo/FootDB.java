@@ -126,11 +126,14 @@ public class FootDB {
             System.out.println("Bad Request!\nCould not add label to node");
     }
 
+    // Football functions
+
     void addTeam(String teamName, String[] players) {
         URI teamNode = createNode();
 
         Map<String, String> data = new TreeMap<>();
         data.put("team_name", teamName);
+        data.put("team_id", UUID.randomUUID().toString());
 
         addPropertyToNode(teamNode, data);
         try{
@@ -144,6 +147,7 @@ public class FootDB {
             URI playerNode = createNode();
             Map<String, String> playerData = new TreeMap<String, String>();
             playerData.put("name", player);
+            playerData.put("player_id", UUID.randomUUID().toString());
 
             addPropertyToNode(playerNode, playerData);
             try {
@@ -251,10 +255,10 @@ public class FootDB {
         return gameStatuses;
     }
 
-    JSONArray getAllPlayers() {
+    JSONArray getTeamData(String teamId) {
         JSONArray players = new JSONArray();
 
-        final String cipherQuery = "{ \"statements\" : [{ \"statement\" : \"match (a)-[r:PLAYS_FOR]->(b) return a,b\"}] }";
+        final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:PLAYS_FOR]->(b) where b.team_id=\'%s\' return a,b\"}] }", teamId);
 
         WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
 
@@ -264,19 +268,47 @@ public class FootDB {
                 .type(MediaType.APPLICATION_JSON)
                 .post(ClientResponse.class);
 
-        JSONArray jsonDump = new JSONObject(response.getEntity(String.class)).getJSONArray("results").getJSONObject(0).getJSONArray("data");
+        String data = response.getEntity(String.class);
+        System.out.println(data);
+        JSONArray jsonDump = new JSONObject(data).getJSONArray("results").getJSONObject(0).getJSONArray("data");
 
-        System.out.println(jsonDump.toString());
         for(int i=0;i<jsonDump.length();i++) {
             JSONArray row = jsonDump.getJSONObject(i).getJSONArray("row");
             JSONObject dat = new JSONObject()
                     .accumulate("player_name", row.getJSONObject(0).getString("name"))
+                    .accumulate("player_id", row.getJSONObject(0).getString("player_id"))
                     .accumulate("club_name", row.getJSONObject(1).getString("team_name"));
 
             players.put(dat);
         }
 
         return players;
+    }
+
+    JSONArray getAllClubs() {
+        JSONArray clubs = new JSONArray();
+
+        final String cipherQuery = "{ \"statements\" : [{ \"statement\" : \"match (a)-[r:PLAYS_FOR]->(b) return distinct b\"}] }";
+
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(cipherQuery)
+                .post(ClientResponse.class);
+
+        JSONArray jsonDump = new JSONObject(response.getEntity(String.class)).getJSONArray("results").getJSONObject(0).getJSONArray("data");
+
+        System.out.println(jsonDump.toString());
+        for(int i=0;i<jsonDump.length();i++) {
+            JSONArray row = jsonDump.getJSONObject(i).getJSONArray("row");
+            JSONObject dat = new JSONObject()
+                    .accumulate("team_name", row.getJSONObject(0).getString("team_name"))
+                    .accumulate("team_id", row.getJSONObject(0).getString("team_id"));
+
+            clubs.put(dat);
+        }
+        return clubs;
     }
 
     boolean stopGame(String matchId) {
@@ -310,5 +342,19 @@ public class FootDB {
         }
 
         return false;
+    }
+
+    JSONArray getGameData(String matchId) {
+        final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=\'%s\' return a.team_id,b.team_id \" }] }", matchId);
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(cipherQuery)
+                .post(ClientResponse.class);
+
+        String data = response.getEntity(String.class);
+        System.out.println(data);
+        return null;
     }
 }

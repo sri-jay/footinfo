@@ -2,6 +2,9 @@ package org.abyeti.footinfo;
 
 import javax.xml.bind.annotation.XmlAccessorType;
 
+/**
+ * Datamodels for java type safety
+**/
 public class ApiDataModels {
 
     @XmlAccessorType
@@ -18,6 +21,21 @@ public class ApiDataModels {
 
     @XmlAccessorType
     static class FinishGameModel {
-        public String matchId;
+        public String match_id;
+    }
+
+    @XmlAccessorType
+    static class PlayerData {
+        public String player_id;
+    }
+
+    @XmlAccessorType
+    static class GetTeam {
+        public String team_id;
+    }
+
+    @XmlAccessorType
+    static class GameData {
+        public String match_id;
     }
 }

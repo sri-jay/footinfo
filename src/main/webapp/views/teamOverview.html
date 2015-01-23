@@ -1,0 +1,50 @@
+<div class="ui segment">
+	<h1 class="black ui dividing header">{{ announcement }}</h1>
+	<div class="ui segment">
+		<h1 class="ui green dividing header">Players</h1>
+		<div class="ui fluid transparent icon input">
+			<input ng-model="searchText" type="text" placeholder="Search...">
+			<i class="search icon"></i>
+		</div>
+		
+		<table class="ui green table">
+			<thead>
+				<th>Team Name</th>
+				<th>Team Id</th>
+				<th></th>				
+			</thead>
+			<tbody>
+				<tr ng-repeat="team in teams | filter:searchText	" >
+					<td>{{ team.team_name }}</td>
+					<td>{{ team.team_id }}</td>
+					<td><a href="#team/{{team.team_name}}/{{team.team_id}}" class="ui inverted blue button">Get Details</a></td>					
+				</tr>
+			</tbody>
+		</table>
+
+		<button ng-click="getAllTeams()" class="fluid ui massive inverted green button">Update</button>
+	</div>
+
+	<br>			
+	<hr>
+	<br>
+		
+	<div class="ui segment">
+		<form class="ui basic form" ng-submit="addTeam()">
+			<h1 class="ui red dividing header">Add team</h1>
+			<div class="field">
+				<div class="ui massive icon input">
+					<input type="text" placeholder="Enter Team Name" ng-model="teamName" required>
+					<i class="flag icon"></i>
+				</div>
+			</div>
+			<div class="field">
+				<div class="ui massive icon input">
+					<input type="text" placeholder="CSV Player names" ng-model="players" required>
+					<i class="user icon"></i>
+				</div>
+			</div>
+			<button class="fluid ui massive red inverted button">Add team</button>
+		</form>
+	</div>
+<div>

@@ -13,7 +13,7 @@ public class ClientApi {
     @Path("/addTeam")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response adminLogin(ApiDataModels.AddTeamModel teamData) {
+    public Response addTeam(ApiDataModels.AddTeamModel teamData) {
         Response resp = null;
         try {
             FootDB db = new FootDB();
@@ -93,14 +93,14 @@ public class ClientApi {
     }
 
     @GET
-    @Path("/getAllPlayers")
+    @Path("/getAllTeams")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response getAllTeams() {
+    public Response getTeam(ApiDataModels.GetTeam teamData) {
         Response resp = null;
         JSONObject data = new JSONObject();
         try {
             FootDB db = new FootDB();
-            data.accumulate("players", db.getAllPlayers());
+            data.accumulate("teams", db.getAllClubs());
             data.accumulate("status", "succeeded");
             resp = Response.status(200).entity(data.toString()).build();
         }
@@ -119,7 +119,7 @@ public class ClientApi {
         Response resp = null;
         try {
             FootDB db = new FootDB();
-            if(db.stopGame(gameData.matchId)) {
+            if(db.stopGame(gameData.match_id)) {
                 resp = Response.status(200).entity("{\"status\" : \"succeeded\" }").build();
             }
             else
@@ -130,5 +130,35 @@ public class ClientApi {
             resp = Response.status(500).entity("{\"status\" : \"failed\" }").build();
         }
         return resp;
+    }
+
+    @POST
+    @Path("/getTeamData")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getPlayerData(ApiDataModels.GetTeam teamData) {
+        JSONObject response = new JSONObject();
+        Response resp = null;
+        try {
+            FootDB db = new FootDB();
+            System.out.println(teamData);
+            response.accumulate("teamData", db.getTeamData(teamData.team_id));
+            response.accumulate("status" , "{\"status\" : \"succeeded\"}");
+            resp = Response.status(200).entity(response.toString()).build();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            resp = Response.status(400).entity("{\"status\" : \"failed\"}").build();
+        }
+
+        return resp;
+    }
+
+    @POST
+    @Path("/getGameDetails")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response getGameDetails(ApiDataModels.GameData gameId) {
+        return null;
     }
 }

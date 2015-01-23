@@ -2,18 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7229d4b-a210-4daf-a02d-4e3167890e1f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.1" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\active_tx_log" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene-store.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.active" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.v0" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\lock" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neo4j.properties" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.labeltokenstore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.labeltokenstore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.labeltokenstore.db.names" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.labeltokenstore.db.names.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.nodestore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.nodestore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.nodestore.db.labels" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.nodestore.db.labels.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.arrays" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.arrays.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.index" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.index.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.index.keys" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.index.keys.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.strings" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.strings.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshipgroupstore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshipgroupstore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshipstore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshipstore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshiptypestore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshiptypestore.db.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshiptypestore.db.names" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshiptypestore.db.names.id" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.schemastore.db" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.schemastore.db.id" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.1" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.active" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.v0" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\rrd" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_8.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_a.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_b.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\segments_2" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\write.lock" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\_e.cfs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\_l.cfs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\segments.gen" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\segments_1" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\write.lock" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\java\org\abyeti\footinfo\couchDB.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\store_lock" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\tm_tx_log.1" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\webapp\images\img1.gif" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\webapp\images\img2.gif" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\webapp\images\img3.gif" afterPath="" />
@@ -72,12 +112,15 @@
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\NEODB\tm_tx_log.1" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB$Labels.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" />
+      <change type="MODIFICATION" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB.class" afterPath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/scripts/controllers.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footinfo.iml" afterPath="$PROJECT_DIR$/footinfo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/match.html" afterPath="$PROJECT_DIR$/src/main/webapp/views/match.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/styles/styles.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/styles/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/team.html" afterPath="$PROJECT_DIR$/src/main/webapp/views/team.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="footinfo.iws" />
@@ -139,8 +182,8 @@
       <file leaf-file-name="ApiDataModels.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6182213" vertical-offset="0" max-vertical-offset="461">
-              <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.86984813" vertical-offset="169" max-vertical-offset="705">
+              <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -149,10 +192,18 @@
       <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1474" max-vertical-offset="2085">
-              <caret line="121" column="47" selection-start-line="121" selection-start-column="47" selection-end-line="121" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="885">
+              <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+                <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+                <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+                <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+                <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+                <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+                <element signature="e#5040#5041#0" expanded="true" />
+                <element signature="e#5067#5068#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -161,8 +212,8 @@
       <file leaf-file-name="FootDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="870">
-              <caret line="115" column="65" selection-start-line="115" selection-start-column="65" selection-end-line="115" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="602" max-vertical-offset="1140">
+              <caret line="356" column="33" selection-start-line="356" selection-start-column="33" selection-end-line="356" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="class#Relationships#0;class#FootDB#0" expanded="false" />
@@ -176,7 +227,8 @@
                 <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
                 <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
                 <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getAllPlayers#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
                 <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
               </folding>
             </state>
@@ -233,8 +285,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/.idea/queries" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/couchDB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" />
       </list>
@@ -461,7 +513,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.5178366" />
-    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="FullScreen" value="false" />
@@ -691,9 +743,9 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1429652" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29942694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19818456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19818456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -725,7 +777,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="9" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -747,7 +799,8 @@
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
             <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getAllPlayers#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
             <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
           </folding>
         </state>
@@ -814,6 +867,14 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -835,7 +896,8 @@
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
             <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getAllPlayers#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
             <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
           </folding>
         </state>
@@ -902,6 +964,14 @@
           <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -923,7 +993,8 @@
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
             <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getAllPlayers#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
             <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
           </folding>
         </state>
@@ -990,6 +1061,14 @@
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1011,7 +1090,8 @@
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
             <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getAllPlayers#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
             <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
           </folding>
         </state>
@@ -1078,6 +1158,14 @@
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1099,7 +1187,8 @@
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
             <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getAllPlayers#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
             <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
           </folding>
         </state>
@@ -1158,6 +1247,14 @@
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1179,7 +1276,8 @@
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
             <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getAllPlayers#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
             <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
           </folding>
         </state>
@@ -1227,6 +1325,14 @@
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1265,6 +1371,14 @@
           <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1303,29 +1417,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="870">
-          <caret line="115" column="65" selection-start-line="115" selection-start-column="65" selection-end-line="115" selection-end-column="65" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="class#Relationships#0;class#FootDB#0" expanded="false" />
-            <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
-            <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
-            <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
-            <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
-            <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
-            <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
-            <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
-            <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
-            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getAllPlayers#0;class#FootDB#0" expanded="false" />
-            <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
@@ -1354,20 +1445,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/FootDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="349" max-vertical-offset="2085">
-          <caret line="121" column="47" selection-start-line="121" selection-start-column="47" selection-end-line="121" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="602" max-vertical-offset="1140">
+          <caret line="356" column="33" selection-start-line="356" selection-start-column="33" selection-end-line="356" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="class#Relationships#0;class#FootDB#0" expanded="false" />
+            <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
+            <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
+            <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="885">
+          <caret line="161" column="20" selection-start-line="161" selection-start-column="20" selection-end-line="161" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
+            <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5067#5068#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6182213" vertical-offset="0" max-vertical-offset="461">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.86984813" vertical-offset="169" max-vertical-offset="705">
+          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
           <folding />
         </state>
       </provider>

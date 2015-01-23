@@ -1,11 +1,20 @@
 var footinfo = angular.module('footinfo', ['ngRoute', 'ngAnimate']);
 
+// Config
 footinfo.config(['$routeProvider', function ($routeProvider){
     $routeProvider.when("/a",{
+        controller: "teamOverviewController",
+        templateUrl: "views/teamOverview.html"
+    })
+    .when("/b", {
+        controller: "matchOverviewController",
+        templateUrl: "views/matchOverview.html"
+    })
+    .when("/team/:team_name/:team_id",     {
         controller: "teamController",
         templateUrl: "views/team.html"
     })
-    .when("/b", {
+    .when("/match/:match_id/:participant_a/:participant_b",     {
         controller: "matchController",
         templateUrl: "views/match.html"
     })
@@ -14,6 +23,7 @@ footinfo.config(['$routeProvider', function ($routeProvider){
     });
 }]);
 
+// Factory
 footinfo.factory("apiFactory",['$http', function($http){
     var factory = {};
     factory.addTeam =  function (teamData) {
@@ -32,8 +42,8 @@ footinfo.factory("apiFactory",['$http', function($http){
                 method: 'POST',
                 url:'http://localhost:8080/footinfo/v1/api/createGame',
                 data: {
-                    "TEAM_A" : participants.teamA,
-                    "TEAM_B" : participants.teamB
+                    "teamA" : participants.teamA,
+                    "teamB" : participants.teamB
                 }
             });
     };
@@ -44,10 +54,10 @@ footinfo.factory("apiFactory",['$http', function($http){
             headers: {'Content-Type' :'application/json'}
         });
     }
-    factory.getAllPlayers = function () {
+    factory.getAllTeams = function () {
         return $http({
             method: 'GET',
-            url: 'http://localhost:8080/footinfo/v1/api/getAllPlayers',            
+            url: 'http://localhost:8080/footinfo/v1/api/getAllTeams',            
         });
     };
 
@@ -58,10 +68,19 @@ footinfo.factory("apiFactory",['$http', function($http){
             data: {"match_id" : match_id}
         });
     }
+    factory.getTeamData = function (team_id) {
+        return $http({
+            method: 'POST',
+            url: 'http://localhost:8080/footinfo/v1/api/getTeamData',
+            data: {'team_id' : team_id}
+        });
+    };
+
     return factory;
 }]);
 
-footinfo.controller('teamController', function (apiFactory, $log, $scope){
+// CONTROLLERS
+footinfo.controller('teamOverviewController', function (apiFactory, $log, $scope){
     $scope.announcement = "Team Controls";
     $scope.addTeam = function () {
         var teamData = {
@@ -89,17 +108,16 @@ footinfo.controller('teamController', function (apiFactory, $log, $scope){
         $scope.getAllPlayers();
     };
 
-    $scope.getAllPlayers = function () {
-        apiFactory.getAllPlayers().success(function (response){
-            $log.log(response.players[0]);
-            $scope.allPlayers = response.players[0];
+    $scope.getAllTeams = function () {
+        apiFactory.getAllTeams().success(function (response){            
+            $scope.teams = response.teams[0];
         });
     };
 
-    $scope.getAllPlayers();
+    $scope.getAllTeams();
 });
 
-footinfo.controller('matchController', function (apiFactory, $log, $scope){
+footinfo.controller('matchOverviewController', function (apiFactory, $log, $scope){
     $scope.announcement = "Match Controls";
     $scope.createGame = function () {
         var participants = {
@@ -151,4 +169,25 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope){
     };
 
     $scope.getGameStatuses();
+});
+
+footinfo.controller('teamController', function (apiFactory, $log, $scope, $routeParams) {
+    apiFactory.getTeamData($routeParams.team_id).success(function (response){
+        $log.log(response);    
+        $scope.players = response.teamData[0];
+        setTeamName($routeParams.team_name, $routeParams.team_id);
+    });
+
+    function setTeamName(name, id){
+        $scope.team_id = id;
+        $scope.team_name = name;
+    }
+});
+
+footinfo.controller('matchController', function (apiFactory, $log, $scope, $routeParams){
+    $scope.match_id = $routeParams.match_id;
+    $scope.participant_a = $routeParams.participant_a;
+    $scope.participant_b = $routeParams.participant_b;
+
+
 });
