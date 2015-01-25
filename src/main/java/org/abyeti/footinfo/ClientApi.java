@@ -1,5 +1,7 @@
 package org.abyeti.footinfo;
 
+import org.abyeti.footinfo.db.DataDB;
+import org.abyeti.footinfo.db.FootDB;
 import org.json.JSONObject;
 
 import javax.ws.rs.*;
@@ -169,5 +171,16 @@ public class ClientApi {
             res = Response.status(500).entity("{\"status\" : \"failed\"}").build();
         }
         return res;
+    }
+
+    @GET
+    @Path("/testHibernate")
+    public void test() {
+        try {
+            DataDB.addFoul("sriduth", "jayhari", "7:30", "12345");
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.abyeti.footinfo.db.ObjectMappings.PlayerData" table="player_data">
+        <meta attribute="class-description">
+            Basic player data is stored here.
+        </meta>
+
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+
+        <property name="firstName" column="first_name" type="text"/>
+        <property name="lastName" column="last_name" type="text"/>
+        <property name="playerId" column="player_id" type="text"/>
+        <property name="dob" column="date_of_birth" type="text"/>
+        <property name="country" column="country" type="text"/>
+    </class>
+</hibernate-mapping>

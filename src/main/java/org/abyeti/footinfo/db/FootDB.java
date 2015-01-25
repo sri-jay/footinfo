@@ -1,4 +1,4 @@
-package org.abyeti.footinfo;
+package org.abyeti.footinfo.db;
 
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
@@ -33,7 +33,7 @@ public class FootDB {
         PLAYER, TEAM, MATCH
     }
 
-    FootDB() throws Exception {
+    public FootDB() throws Exception {
         WebResource server = Client.create().resource(SERVER_ROOT);
         ClientResponse resp = server.get(ClientResponse.class);
 
@@ -46,7 +46,7 @@ public class FootDB {
             System.out.println("Connected to server");
     }
 
-    URI createNode() {
+    public URI createNode() {
         WebResource nodeResource = Client.create().resource(NODE_NOOT);
         ClientResponse resp = nodeResource
                 .accept(MediaType.APPLICATION_JSON)
@@ -128,7 +128,7 @@ public class FootDB {
 
     // Football functions
 
-    void addTeam(String teamName, String[] players) throws Exception {
+    public void addTeam(String teamName, String[] players) throws Exception {
         URI teamNode = createNode();
 
         Map<String, String> data = new TreeMap<>();
@@ -160,7 +160,7 @@ public class FootDB {
         }
     }
 
-    boolean createGame(String tA, String tB) throws Exception {
+    public boolean createGame(String tA, String tB) throws Exception {
         boolean status = true;
 
         WebResource res = null;
@@ -221,7 +221,7 @@ public class FootDB {
         return status;
     }
 
-    JSONArray getGameStatuses() throws Exception {
+    public JSONArray getGameStatuses() throws Exception {
         JSONArray gameStatuses = new JSONArray();
 
         final String cipherQuery = "{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) return a,b,r\" }]}";
@@ -255,7 +255,7 @@ public class FootDB {
         return gameStatuses;
     }
 
-    JSONArray getTeamData(String teamId) throws Exception {
+    public JSONArray getTeamData(String teamId) throws Exception {
         JSONArray players = new JSONArray();
 
         final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:PLAYS_FOR]->(b) where b.team_id=\'%s\' return a,b\"}] }", teamId);
@@ -285,7 +285,7 @@ public class FootDB {
         return players;
     }
 
-    JSONArray getAllClubs() throws Exception {
+    public JSONArray getAllClubs() throws Exception {
         JSONArray clubs = new JSONArray();
 
         final String cipherQuery = "{ \"statements\" : [{ \"statement\" : \"match (a)-[r:PLAYS_FOR]->(b) return distinct b\"}] }";
@@ -311,7 +311,7 @@ public class FootDB {
         return clubs;
     }
 
-    boolean stopGame(String matchId) throws Exception {
+    public boolean stopGame(String matchId) throws Exception {
         final String cipherQuery = String.format("{\"statements\" : [{\"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return id(r)\"}] }", matchId);
 
         System.out.println(cipherQuery);
@@ -344,7 +344,7 @@ public class FootDB {
         return false;
     }
 
-    JSONObject getGameData(String matchId) throws Exception {
+    public JSONObject getGameData(String matchId) throws Exception {
         final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return a.team_id,b.team_id \" }] }", matchId);
         WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
         ClientResponse response = res
@@ -353,7 +353,13 @@ public class FootDB {
                 .entity(cipherQuery)
                 .post(ClientResponse.class);
 
-        JSONArray row  = new JSONObject(response.getEntity(String.class)).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row");
+        String responseData = response.getEntity(String.class);
+
+        System.out.println(responseData);
+
+        JSONArray row  = new JSONObject(responseData).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row");
+
+        System.out.println(row.toString());
 
         JSONArray teamAData = getTeamData(row.getString(0));
         JSONArray teamBData = getTeamData(row.getString(1));

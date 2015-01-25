@@ -1,11 +1,13 @@
-org\abyeti\footinfo\FootDB$Relationships.class
+org\abyeti\footinfo\db\FootDB$Relationships.class
+org\abyeti\footinfo\db\FootDB.class
 org\abyeti\footinfo\ApiDataModels$CreateGameModel.class
 org\abyeti\footinfo\ApiDataModels$PlayerData.class
-org\abyeti\footinfo\ApiDataModels$GetTeam.class
 org\abyeti\footinfo\ClientApi.class
-org\abyeti\footinfo\FootDB$NodeLabels.class
 org\abyeti\footinfo\ApiDataModels$AddTeamModel.class
 org\abyeti\footinfo\ApiDataModels$GameData.class
+org\abyeti\footinfo\db\FootDB$NodeLabels.class
+org\abyeti\footinfo\db\MatchFoul.class
+org\abyeti\footinfo\ApiDataModels$GetTeam.class
 org\abyeti\footinfo\ApiDataModels.class
-org\abyeti\footinfo\FootDB.class
 org\abyeti\footinfo\ApiDataModels$FinishGameModel.class
+org\abyeti\footinfo\db\DataDB.class
