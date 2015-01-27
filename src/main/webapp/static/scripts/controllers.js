@@ -1,4 +1,4 @@
-var footinfo = angular.module('footinfo', ['ngRoute', 'ngAnimate']);
+var footinfo = angular.module('footinfo', ['ngRoute', 'ngAnimate', 'n3-line-chart']);
 
 // Config
 footinfo.config(['$routeProvider', function ($routeProvider){
@@ -17,6 +17,10 @@ footinfo.config(['$routeProvider', function ($routeProvider){
     .when("/match/:match_id/:participant_a/:participant_b",     {
         controller: "matchController",
         templateUrl: "views/match.html"
+    })
+    .when("/player/:player_id/:player_team/:player_name", {
+        controller: "playerStatsController",
+        templateUrl: "views/player.html"
     })
     .when("/", {
         redirectTo: "/b"
@@ -84,14 +88,14 @@ footinfo.factory("apiFactory",['$http', function($http){
         });
     }
 
-    factory.makeFoul = function (commitedBy, foulOn, gameId) {
+    factory.playerFoul = function (commitedBy, foulOn, gameId) {
         return $http({
             method: 'POST',
-            url: 'http://localhost:8080/footinfo/vi/api/makeFoul',
+            url: 'http://localhost:8080/footinfo/v1/api/playerFoul',
             data: {
-                'commited_by' : commited_by,
+                'commited_by' : commitedBy,
                 'foul_on' : foulOn,
-                'gameId': gameId
+                'match_id': gameId
             }
         });
     };
@@ -99,7 +103,7 @@ footinfo.factory("apiFactory",['$http', function($http){
     factory.playerCard = function (awardedTo, cardType, matchId) {
         return $http({
             method: 'POST',
-            url: 'http://localhost:8080/footinfo/vi/api/playerCard',
+            url: 'http://localhost:8080/footinfo/v1/api/playerCard',
             data: {
                 'awarded_to' : awardedTo,
                 'card_type' : cardType,
@@ -108,6 +112,15 @@ footinfo.factory("apiFactory",['$http', function($http){
         });
     };
 
+    factory.getPlayerStats = function (playerId) {
+        return $http({
+            method: 'POST',
+            url: 'http://localhost:8080/footinfo/v1/api/getPlayerStats',
+            data : {
+                'player_id': playerId
+            }
+        });
+    };
     return factory;
 }]);
 
@@ -136,8 +149,8 @@ footinfo.controller('teamOverviewController', function (apiFactory, $log, $scope
                     text: "Something went wrong."
                 });
             }
-        });
-        $scope.getAllPlayers();
+        });      
+        $scope.getAllTeams();
     };
 
     $scope.getAllTeams = function () {
@@ -145,8 +158,6 @@ footinfo.controller('teamOverviewController', function (apiFactory, $log, $scope
             $scope.teams = response.teams[0];
         });
     };
-
-    $scope.getAllTeams();
 });
 
 footinfo.controller('matchOverviewController', function (apiFactory, $log, $scope){
@@ -227,11 +238,136 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope, $rout
             $scope.team_b = response.team_b[0];
     });
 
-    $scope.makeFoul = function ($event, playerId, matchId) {
+    $scope.playerFoul = function () {   
 
+        // Angular will not bind to hiddden elements.     
+        var commitedBy = document.getElementById("commitedBy").value;
+        var foulOn = document.getElementById("foulOn").value;
+        
+        apiFactory.playerFoul(commitedBy, foulOn, $scope.match_id).success(function (response) {
+            if(response["status"] == "succeeded") {
+                swal({
+                    type: 'success',
+                    title: 'Done!',
+                    text: 'Foul Recorded.'
+                }); 
+            }
+        });
     };
 
-    $scope.playerCard = function (awardedTo, cardType, matchId) {
+    $scope.playerCard = function () {
+        // Angular will not bind to hidden elements
+        var awardedTo = document.getElementById("awardedTo").value;
+        var cardType = document.getElementById("playerCardType").value;
 
+        apiFactory.playerCard(awardedTo, cardType, $scope.match_id).success(function (response){
+            if(response["status"] == "succeeded") {
+                swal({
+                    type: 'success',
+                    title: 'Carded!',
+                    text: 'Player has been carded!'
+                });
+            }
+        });
     };
+});
+
+footinfo.controller('playerStatsController', function (apiFactory, $log, $scope, $routeParams){
+    $scope.playerName = $routeParams.player_name;
+    $scope.playerTeam = $routeParams.player_team;
+    
+    apiFactory.getPlayerStats($routeParams.player_id).success(function (response){
+
+        var graphData = [];
+        var matchLabels = [];        
+        $log.log(response);
+
+        for(var counter=0;counter<response.length;counter++){
+            for(var game in response[counter]){
+                var datum = {};
+                
+                matchLabels.push(game);
+                datum.x = counter;                
+                datum.goals = response[counter][game][0].goals;
+                datum.fouls = response[counter][game][1].fouls;
+                datum.yellow_cards = response[counter][game][2].yellow_cards;
+                datum.red_cards = response[counter][game][3].red_cards;            
+            
+                graphData.push(datum);
+            }
+        }
+
+        // Assign data to scope for n3.
+        $scope.data = graphData;
+
+        // assign options to scope for n3.
+        $scope.options = {
+            stacks: [{axis: "y", series: ["goals", "fouls", "yellow_cards", "red_cards"]}],
+            lineMode: "cardinal",
+            series: [
+                {
+                    id: "goals",
+                    y: "goals",
+                    label: "Goals",
+                    type: "line",
+                    color: "green",
+                    axis: "y",
+                    thickness: "2px"
+                },
+                {
+                    id: "fouls",
+                    y: "fouls",
+                    label: "Fouls",
+                    type: "line",
+                    color: "orange",
+                    axis: "y",
+                    thickness: "2px"
+                },
+                {
+                    id: "yellow_cards",
+                    y: "yellow_cards",
+                    label: "Yellow Cards",
+                    type: "line",
+                    color: "yellow",
+                    axis: "y",
+                    thickness: "2px"
+                },
+                {
+                    id: "red_cards",
+                    y: "red_cards",
+                    label: "Red Cards",
+                    type: "line",
+                    color: "red",
+                    axis: "y",
+                    thickness: "2px"
+                }
+            ],
+            axes: {
+                x: {
+                    type: "linear",
+                    key: "x",
+                    labelFunction: function (label){
+                        return matchLabels[label];
+                    }
+                 },
+                y: {
+                    type: "linear",
+                    key: "y"
+                }
+            },
+            tension: 0.7,
+            lineMode: "linear",
+            tooltip: {
+                mode: "scrubber",
+                formatter: function (x,y, series) {
+                    return series.label + " : "+y
+                }
+            },
+            drawLegend: true,
+            drawDots: true,
+            columnsHGap: 5
+        };
+
+
+    });    
 });

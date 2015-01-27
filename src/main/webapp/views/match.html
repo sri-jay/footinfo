@@ -23,14 +23,17 @@
 
 	<div class="ui segment">
 		<h1 class="ui orange dividing header">Player Foul</h1>
-		<form class="ui orange form">
+		<form class="ui orange form" ng-submit="playerFoul()">
 			<div class="two fields">
 				<div class="field">
 					<div class="ui fluid search selection dropdown">
-						<input type="hidden" name="playet_id"/>
-						<div class="default text">{{participant_a}}</div>
+						<input type="hidden" id="commitedBy" name="commitedBy" ng-model="commitedBy">
+						<div class="default text">Foul commited by</div>
 						<div class="menu">
 							<div class="item" ng-repeat="player in team_a" data-value="{{player.player_id}}">
+								{{player.player_name}}
+							</div>
+							<div class="item" ng-repeat="player in team_b" data-value="{{player.player_id}}">
 								{{player.player_name}}
 							</div>
 						</div>
@@ -38,10 +41,13 @@
 				</div>
 				<div class="field">
 					<div class="ui fluid search selection dropdown">
-						<input type="hidden" name="playet_id"/>
-						<div class="default text">{{participant_b}}</div>
+						<input type="hidden" id="foulOn" name="foulOn" ng-model="foulOn">
+						<div class="default text">Foul Victim</div>
 						<div class="menu">
 							<div class="item" ng-repeat="player in team_b" data-value="{{player.player_id}}">
+								{{player.player_name}}
+							</div>
+							<div class="item" ng-repeat="player in team_a" data-value="{{player.player_id}}">
 								{{player.player_name}}
 							</div>
 						</div>
@@ -54,11 +60,11 @@
 
 	<div class="ui segment">
 		<h1 class="ui red dividing header">Player Card</h1>
-		<form class="ui red form">
+		<form class="ui red form" ng-submit="playerCard()">
 			<div class="field">
 					<div class="ui fluid search selection dropdown">
-						<input type="hidden" name="playet_id"/>
-						<div class="default text">{{participant_b}}</div>
+						<input type="hidden" id="awardedTo" ng-model="cardAwardedTo" name="player_id"/>
+						<div class="default text">Select Player Name</div>
 						<div class="menu">
 							<div class="item" ng-repeat="player in team_b" data-value="{{player.player_id}}">
 								{{player.player_name}}
@@ -73,8 +79,8 @@
 
 			<div class="field">
 					<div class="ui fluid search selection dropdown">
-						<input type="hidden" name="playet_id"/>
-						<div class="default text">{{participant_b}}</div>
+						<input type="hidden" id="playerCardType" ng-model="cardType" />
+						<div class="default text">Select Card Type</div>
 						<div class="menu">
 							<div class="inverted orange item" data-value="yellow">Yellow Card</div>
 							<div class="inverted red item" data-value="red">Red Card</div>

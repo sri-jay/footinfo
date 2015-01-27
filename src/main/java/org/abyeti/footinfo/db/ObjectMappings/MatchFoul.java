@@ -14,6 +14,8 @@ public class MatchFoul {
     private String foulTime;
     private String matchId;
 
+    public MatchFoul() {}
+
     public MatchFoul(String commitedBy, String foulOn, String foulTime, String matchId) {
         this.commitedBy = commitedBy;
         this.foulOn = foulOn;

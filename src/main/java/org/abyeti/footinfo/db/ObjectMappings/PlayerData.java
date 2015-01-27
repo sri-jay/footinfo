@@ -2,35 +2,27 @@ package org.abyeti.footinfo.db.ObjectMappings;
 
 import org.neo4j.cypher.internal.compiler.v2_0.functions.Str;
 
+import java.sql.Blob;
+
 /**
  * Created by Work on 1/25/2015.
  */
 public class PlayerData {
     private int id;
-    private String firstName;
-    private String lastName;
     private String playerId;
     private String dob;
     private String country;
+    private Blob picture;
 
-    public PlayerData(String firstName, String lastName, String playerId, String dob, String country) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public PlayerData(String playerId, String dob, String country, Blob picture) {
         this.playerId = playerId;
         this.dob = dob;
         this.country = country;
+        this.picture = picture;
     }
 
     public int getId() {
         return id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName(){
-        return lastName;
     }
 
     public String getPlayerId() {
@@ -45,16 +37,12 @@ public class PlayerData {
         return country;
     }
 
+    public Blob getPicture() {
+        return picture;
+    }
+
     public void setId(int id) {
         this.id = id;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName =firstName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public void setPlayerId(String playerId){
@@ -67,5 +55,9 @@ public class PlayerData {
 
     public void setCountry(String country){
         this.country = country;
+    }
+
+    public void setPicture(Blob picture) {
+        this.picture = picture;
     }
 }

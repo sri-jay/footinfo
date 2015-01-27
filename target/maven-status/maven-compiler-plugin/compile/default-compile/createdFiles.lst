@@ -1,6 +1,8 @@
+org\abyeti\footinfo\ApiDataModels$PlayerFoul.class
 org\abyeti\footinfo\db\FootDB$Relationships.class
 org\abyeti\footinfo\db\FootDB.class
 org\abyeti\footinfo\ApiDataModels$CreateGameModel.class
+org\abyeti\footinfo\ApiDataModels$PlayerCard.class
 org\abyeti\footinfo\ApiDataModels$PlayerData.class
 org\abyeti\footinfo\ClientApi.class
 org\abyeti\footinfo\db\ObjectMappings\MatchGoal.class
@@ -9,6 +11,7 @@ org\abyeti\footinfo\ApiDataModels$GameData.class
 org\abyeti\footinfo\db\ObjectMappings\PenaltyCard.class
 org\abyeti\footinfo\db\FootDB$NodeLabels.class
 org\abyeti\footinfo\db\ObjectMappings\PlayerData.class
+org\abyeti\footinfo\ApiDataModels$MatchGoal.class
 org\abyeti\footinfo\db\ObjectMappings\MatchFoul.class
 org\abyeti\footinfo\ApiDataModels$GetTeam.class
 org\abyeti\footinfo\ApiDataModels.class

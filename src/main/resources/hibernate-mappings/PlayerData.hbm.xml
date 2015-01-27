@@ -10,10 +10,9 @@
             <generator class="native"/>
         </id>
 
-        <property name="firstName" column="first_name" type="text"/>
-        <property name="lastName" column="last_name" type="text"/>
         <property name="playerId" column="player_id" type="text"/>
         <property name="dob" column="date_of_birth" type="text"/>
         <property name="country" column="country" type="text"/>
+        <property name="picture" column="picture" type="blob"/>
     </class>
 </hibernate-mapping>

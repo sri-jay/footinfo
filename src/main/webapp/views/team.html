@@ -8,10 +8,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="player in players">
-				<td>{{ player.player_name }}</td>
-				<td>{{ player.player_id }}</td>
-			</tr>
+			<tr ng-repeat="player in players">				
+				<td>
+					<a href="#player/{{player.player_id}}/{{team_name}}/{{ player.player_name }}">{{ player.player_name }}</a>
+				</td>
+				<td>
+					<a href="#player/{{player.player_id}}/{{team_name}}/{{ player.player_name }}">{{ player.player_id }}</a>
+				</td>
+			</tr>			
 		</tbody>
 	</table>
 </div>

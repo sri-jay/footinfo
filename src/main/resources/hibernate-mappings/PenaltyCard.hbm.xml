@@ -10,7 +10,7 @@
             <generator class="native"/>
         </id>
 
-        <property name="awardedTo" column="commited_by" type="text"/>
+        <property name="awardedTo" column="awarded_to" type="text"/>
         <property name="cardType" column="card_type" type="text"/>
         <property name="matchId" column="match_id" type="text"/>
     </class>

@@ -52,4 +52,12 @@ public class ApiDataModels {
         public String card_type;
         public String match_id;
     }
+
+    @XmlAccessorType
+    static class MatchGoal {
+        public String goal_type;
+        public String scored_by;
+        public String goal_time;
+        public String match_id;
+    }
 }

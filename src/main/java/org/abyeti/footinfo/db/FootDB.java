@@ -67,8 +67,7 @@ public class FootDB {
             resource = Client.create().resource(nodePropertyURI);
             resp = resource
                     .accept(MediaType.APPLICATION_JSON)
-                    .type(MediaType.APPLICATION_JSON)
-                    .entity("\""+ent.getValue()+"\"")
+                    .entity("\"" + ent.getValue() + "\"")
                     .put(ClientResponse.class);
             resp.close();
         }
@@ -368,5 +367,25 @@ public class FootDB {
 
         System.out.println(data.toString());
         return data;
+    }
+
+    public String[] getParticipants(String matchId) throws Exception {
+        final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return a.team_name,b.team_name \" }] }", matchId);
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(cipherQuery)
+                .post(ClientResponse.class);
+
+        String responseData = response.getEntity(String.class);
+
+        System.out.println(responseData);
+        JSONArray row  = new JSONObject(responseData).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row");
+
+        String[] participants = new String[2];
+        participants[0] = row.getString(0);
+        participants[1] = row.getString(1);
+        return participants;
     }
 }
