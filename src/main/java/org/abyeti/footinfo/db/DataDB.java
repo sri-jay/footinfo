@@ -17,6 +17,7 @@ public class DataDB {
     private static Session session;
     private static Transaction tx;
 
+    // Add data to BD
     public static void addFoul(String cB, String fO, String fT, String mId) {
         try {
             sf = new Configuration().configure().buildSessionFactory();
@@ -84,4 +85,5 @@ public class DataDB {
             e.printStackTrace();
         }
     }
+
 }

@@ -1,9 +1,12 @@
 package org.abyeti.footinfo.db.ObjectMappings;
 
+import javax.persistence.Entity;
+
 /**
  * Created by Work on 1/25/2015.
  * For hibernate mapping
  */
+@Entity
 public class MatchFoul {
     private int id;
     private String commitedBy;
@@ -11,11 +14,11 @@ public class MatchFoul {
     private String foulTime;
     private String matchId;
 
-    public MatchFoul(String cB, String fO, String fT, String mId) {
-        commitedBy = cB;
-        foulOn = fO;
-        foulTime = fT;
-        matchId = mId;
+    public MatchFoul(String commitedBy, String foulOn, String foulTime, String matchId) {
+        this.commitedBy = commitedBy;
+        this.foulOn = foulOn;
+        this.foulTime = foulTime;
+        this.matchId = matchId;
     }
 
     public int getId() {

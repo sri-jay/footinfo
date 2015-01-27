@@ -1,5 +1,5 @@
 <div class="ui segment">
-	<h1 class="black ui dividing header">{{ announcement }}</h1>
+	<h1 class="ui green dividing header">{{ announcement }}</h1>
 	<div class="ui segment">
 		<h1 class="ui green dividing header">Match Status</h1>
 		<div class="ui fluid transparent icon input">
@@ -21,7 +21,7 @@
 					<td>{{ gstat.match_participant_a }}</td>
 					<td>{{ gstat.match_participant_b }}</td>
 					<td>{{ gstat.start_time }}</td>
-					<td class="match-status">{{ gstat.match_status }}</td>
+					<td class="match-status {{ gstat.match_status }}">{{ gstat.match_status }}</td>
 					<td>
 						<!-- <button class="ui inverted red button" ng-click="finishMatch($event,gstat.match_id)">Finish</button> -->
 						<a class="ui blue inverted button" 

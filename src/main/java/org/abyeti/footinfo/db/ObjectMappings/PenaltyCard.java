@@ -1,8 +1,13 @@
 package org.abyeti.footinfo.db.ObjectMappings;
 
+import org.hibernate.annotations.Table;
+
+import javax.persistence.Entity;
+
 /**
  * Created by Work on 1/25/2015.
  */
+@Entity
 public class PenaltyCard {
     private int id;
     private String awardedTo;

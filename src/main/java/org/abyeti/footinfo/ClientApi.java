@@ -2,6 +2,7 @@ package org.abyeti.footinfo;
 
 import org.abyeti.footinfo.db.DataDB;
 import org.abyeti.footinfo.db.FootDB;
+import org.joda.time.DateTime;
 import org.json.JSONObject;
 
 import javax.ws.rs.*;
@@ -72,45 +73,39 @@ public class ClientApi {
     public Response getAllGameStatus() {
         JSONObject gameSatuses = new JSONObject();
 
-        Response resp = null;
-
         try {
             FootDB db = new FootDB();
             gameSatuses.accumulate("game_statuses", db.getGameStatuses());
             gameSatuses.accumulate("status", "suceeded");
-            resp = Response
+            return Response
                     .status(200)
                     .entity(gameSatuses.toString())
                     .build();
         }
         catch(Exception e) {
             e.printStackTrace();
-            resp = Response
+            return Response
                     .status(500)
                     .entity(new JSONObject().append("status", "failed").toString())
                     .build();
         }
-
-        return resp;
     }
 
     @GET
     @Path("/getAllTeams")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getTeam(ApiDataModels.GetTeam teamData) {
-        Response resp = null;
         JSONObject data = new JSONObject();
         try {
             FootDB db = new FootDB();
             data.accumulate("teams", db.getAllClubs());
             data.accumulate("status", "succeeded");
-            resp = Response.status(200).entity(data.toString()).build();
+            return Response.status(200).entity(data.toString()).build();
         }
         catch (Exception e) {
             e.printStackTrace();
-            resp = Response.status(500).entity("{\"status\" : \"failed\"}").build();
+            return Response.status(500).entity("{\"status\" : \"failed\"}").build();
         }
-        return resp;
     }
 
     @POST
@@ -118,20 +113,18 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response stopGame(ApiDataModels.FinishGameModel gameData) {
-        Response resp = null;
         try {
             FootDB db = new FootDB();
             if(db.stopGame(gameData.match_id)) {
-                resp = Response.status(200).entity("{\"status\" : \"succeeded\" }").build();
+                return Response.status(200).entity("{\"status\" : \"succeeded\" }").build();
             }
             else
-                resp = Response.status(200).entity("{\"status\" : \"failed\" }").build();
+                return Response.status(200).entity("{\"status\" : \"failed\" }").build();
         }
         catch (Exception e) {
             e.printStackTrace();
-            resp = Response.status(500).entity("{\"status\" : \"failed\" }").build();
+            return Response.status(500).entity("{\"status\" : \"failed\" }").build();
         }
-        return resp;
     }
 
     @POST
@@ -140,20 +133,18 @@ public class ClientApi {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getPlayerData(ApiDataModels.GetTeam teamData) {
         JSONObject response = new JSONObject();
-        Response resp = null;
+
         try {
             FootDB db = new FootDB();
             System.out.println(teamData);
             response.accumulate("teamData", db.getTeamData(teamData.team_id));
             response.accumulate("status" , "{\"status\" : \"succeeded\"}");
-            resp = Response.status(200).entity(response.toString()).build();
+            return Response.status(200).entity(response.toString()).build();
         }
         catch (Exception e) {
             e.printStackTrace();
-            resp = Response.status(400).entity("{\"status\" : \"failed\"}").build();
+            return Response.status(400).entity("{\"status\" : \"failed\"}").build();
         }
-
-        return resp;
     }
 
     @POST
@@ -173,14 +164,33 @@ public class ClientApi {
         return res;
     }
 
-    @GET
-    @Path("/testHibernate")
-    public void test() {
+    @POST
+    @Path("/playerFoul")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response playerFoul(ApiDataModels.PlayerFoul foul) {
         try {
-            DataDB.addFoul("sriduth", "jayhari", "7:30", "12345");
+            DataDB.addFoul(foul.commited_by, foul.foul_on, new DateTime().toString(), foul.match_id);
+            return Response.status(200).entity("{\"Status\" : \"succeeded\"}").build();
         }
         catch (Exception e){
             e.printStackTrace();
+            return Response.status(200).entity("{\"Status\" : \"failed\"}").build();
+        }
+    }
+
+    @POST
+    @Path("/playerCard")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response playerCard(ApiDataModels.PlayerCard card) {
+        try {
+            DataDB.addPlayerCard(card.awarded_to, card.card_type, card.match_id);
+            return Response.status(200).entity("{\"Status\" : \"succeeded\"}").build();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(200).entity("{\"Status\" : \"failed\"}").build();
         }
     }
 }

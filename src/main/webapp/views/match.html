@@ -1,4 +1,12 @@
-<div class="ui segment">
+<script>
+	$('.dropdown')
+  .dropdown({
+    // you can use any ui transition
+    transition: 'drop'
+  })
+;
+</script>
+<div class="ui basic  segment">
 	<h1 class="ui green dividing header">{{participant_a}} vs. {{participant_b}} / {{ match_id }}</h1>
 	<table class="ui green table">
 		<thead>
@@ -12,4 +20,69 @@
 			</tr>
 		</tbody>
 	</table>
+
+	<div class="ui segment">
+		<h1 class="ui orange dividing header">Player Foul</h1>
+		<form class="ui orange form">
+			<div class="two fields">
+				<div class="field">
+					<div class="ui fluid search selection dropdown">
+						<input type="hidden" name="playet_id"/>
+						<div class="default text">{{participant_a}}</div>
+						<div class="menu">
+							<div class="item" ng-repeat="player in team_a" data-value="{{player.player_id}}">
+								{{player.player_name}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="field">
+					<div class="ui fluid search selection dropdown">
+						<input type="hidden" name="playet_id"/>
+						<div class="default text">{{participant_b}}</div>
+						<div class="menu">
+							<div class="item" ng-repeat="player in team_b" data-value="{{player.player_id}}">
+								{{player.player_name}}
+							</div>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<button type="submit" class="ui fluid massive inverted orange button">Make Foul</button>
+		</form>
+	</div>
+
+	<div class="ui segment">
+		<h1 class="ui red dividing header">Player Card</h1>
+		<form class="ui red form">
+			<div class="field">
+					<div class="ui fluid search selection dropdown">
+						<input type="hidden" name="playet_id"/>
+						<div class="default text">{{participant_b}}</div>
+						<div class="menu">
+							<div class="item" ng-repeat="player in team_b" data-value="{{player.player_id}}">
+								{{player.player_name}}
+							</div>
+
+							<div class="item" ng-repeat="player in team_a" data-value="{{player.player_id}}">
+								{{player.player_name}}
+							</div>
+						</div>
+					</div>				
+			</div>
+
+			<div class="field">
+					<div class="ui fluid search selection dropdown">
+						<input type="hidden" name="playet_id"/>
+						<div class="default text">{{participant_b}}</div>
+						<div class="menu">
+							<div class="inverted orange item" data-value="yellow">Yellow Card</div>
+							<div class="inverted red item" data-value="red">Red Card</div>
+						</div>
+					</div>				
+			</div>
+			<button type="submit" class="ui massive fluid red inverted button">Card Player</button>
+		</form>
+	</div>
+
 </div>

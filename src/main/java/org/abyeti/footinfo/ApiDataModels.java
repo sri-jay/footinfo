@@ -38,4 +38,18 @@ public class ApiDataModels {
     static class GameData {
         public String match_id;
     }
+
+    @XmlAccessorType
+    static class PlayerFoul {
+        public String commited_by;
+        public String foul_on;
+        public String match_id;
+    }
+
+    @XmlAccessorType
+    static class PlayerCard {
+        public String awarded_to;
+        public String card_type;
+        public String match_id;
+    }
 }

@@ -1,10 +1,14 @@
 package org.abyeti.footinfo.db.ObjectMappings;
 
+import org.hibernate.annotations.Table;
 import org.neo4j.cypher.internal.compiler.v2_0.functions.Str;
+
+import javax.persistence.Entity;
 
 /**
  * Created by Work on 1/25/2015.
  */
+@Entity
 public class MatchGoal {
     private int id;
     private String goalType;

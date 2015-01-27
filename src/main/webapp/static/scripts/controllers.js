@@ -83,6 +83,31 @@ footinfo.factory("apiFactory",['$http', function($http){
             data: {"match_id" : match_id}
         });
     }
+
+    factory.makeFoul = function (commitedBy, foulOn, gameId) {
+        return $http({
+            method: 'POST',
+            url: 'http://localhost:8080/footinfo/vi/api/makeFoul',
+            data: {
+                'commited_by' : commited_by,
+                'foul_on' : foulOn,
+                'gameId': gameId
+            }
+        });
+    };
+
+    factory.playerCard = function (awardedTo, cardType, matchId) {
+        return $http({
+            method: 'POST',
+            url: 'http://localhost:8080/footinfo/vi/api/playerCard',
+            data: {
+                'awarded_to' : awardedTo,
+                'card_type' : cardType,
+                'match_id' : matchId
+            }
+        });
+    };
+
     return factory;
 }]);
 
@@ -202,4 +227,11 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope, $rout
             $scope.team_b = response.team_b[0];
     });
 
+    $scope.makeFoul = function ($event, playerId, matchId) {
+
+    };
+
+    $scope.playerCard = function (awardedTo, cardType, matchId) {
+
+    };
 });

@@ -4,9 +4,9 @@ body {
 }
 
 .container {
-	width: 90%;
-	margin-left: 5%;
-	margin-right: 5%;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
 	margin-top:5.5vh;
 }
 
@@ -79,4 +79,12 @@ body {
 .team-b:hover {
 	background-color: OrangeRed;
 	color: white;
+}
+
+.ongoing {
+	color: green;
+}
+
+.finished {
+	color: red;
 }
