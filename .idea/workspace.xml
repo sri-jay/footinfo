@@ -5,8 +5,6 @@
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\active_tx_log" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene-store.db" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.active" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.v0" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.v1" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neo4j.properties" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.id" afterPath="" />
@@ -39,18 +37,14 @@
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.schemastore.db" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.schemastore.db.id" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.active" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.v0" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.v1" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\rrd" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_8.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_a.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_b.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\segments_2" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\write.lock" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\_n.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\_p.cfs" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\_q.cfs" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\segments.gen" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\segments_2" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\store_lock" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\tm_tx_log.1" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\webapp\images\img1.gif" afterPath="" />
@@ -113,22 +107,13 @@
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB$Relationships.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/index/lucene.log.1" afterPath="$PROJECT_DIR$/database/index/lucene.log.1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/nioneo_logical.log.1" afterPath="$PROJECT_DIR$/database/nioneo_logical.log.1" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/MatchFoul.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/MatchFoul.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate-mappings/PenaltyCard.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate-mappings/PenaltyCard.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate-mappings/PlayerData.hbm.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate-mappings/PlayerData.hbm.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/PlayerData.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/PlayerData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/scripts/controllers.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/match.html" afterPath="$PROJECT_DIR$/src/main/webapp/views/match.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/team.html" afterPath="$PROJECT_DIR$/src/main/webapp/views/team.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/player.html" afterPath="$PROJECT_DIR$/src/main/webapp/views/player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/styles/styles.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/styles/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="footinfo.iws" />
@@ -155,11 +140,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1168" max-vertical-offset="1638">
-              <caret line="200" column="41" selection-start-line="200" selection-start-column="41" selection-end-line="200" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.7601713" vertical-offset="1241" max-vertical-offset="1764">
+              <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
@@ -169,20 +154,21 @@
                 <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
                 <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
                 <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-                <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataDB.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DataDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.66519827" vertical-offset="1310" max-vertical-offset="2520">
-              <caret line="102" column="131" selection-start-line="102" selection-start-column="131" selection-end-line="102" selection-end-column="131" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="2086">
+              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#addFoul#0;class#DataDB#0" expanded="false" />
+                <element signature="method#addGoal#0;class#DataDB#0" expanded="false" />
+                <element signature="method#addPlayerCard#0;class#DataDB#0" expanded="false" />
                 <element signature="method#addPlayer#0;class#DataDB#0" expanded="false" />
                 <element signature="e#3610#3618#0" expanded="true" />
                 <element signature="e#3682#3699#0" expanded="true" />
@@ -194,21 +180,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PenaltyCard.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/PenaltyCard.java">
+      <file leaf-file-name="hibernate.cfg.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MatchGoal.hbm.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/MatchGoal.hbm.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
-              <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -218,17 +194,49 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/MatchFoul.hbm.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="55" />
+              <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PenaltyCard.hbm.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/PenaltyCard.hbm.xml">
+      <file leaf-file-name="PenaltyCard.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/PenaltyCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
-              <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="1288">
+              <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+              <folding>
+                <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#4;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#5;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#6;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#7;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#8;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#9;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+                <element signature="n#dependency#10;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApiDataModels.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -237,8 +245,8 @@
       <file leaf-file-name="FootDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="1232">
-              <caret line="387" column="22" selection-start-line="387" selection-start-column="22" selection-end-line="387" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="575" max-vertical-offset="1232">
+              <caret line="389" column="5" selection-start-line="389" selection-start-column="5" selection-end-line="389" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
@@ -260,21 +268,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApiDataModels.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="966">
-              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MatchFoul.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/MatchFoul.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="714">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -332,12 +330,12 @@
         <option value="$PROJECT_DIR$/src/main/resources/hibernate-mappings/PlayerData.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/PlayerData.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/MatchFoul.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate-mappings/PenaltyCard.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
       </list>
     </option>
   </component>
@@ -573,40 +571,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjectMappings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -907,7 +871,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -952,7 +916,6 @@
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1046,7 +1009,6 @@
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,7 +1102,6 @@
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1227,7 +1188,6 @@
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1304,7 +1264,6 @@
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1349,7 +1308,6 @@
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1399,26 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5552239" vertical-offset="498" max-vertical-offset="1380">
-          <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
-          <folding>
-            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#4;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#5;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#6;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#7;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#8;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#9;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-            <element signature="n#dependency#10;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/MatchGoal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2310231" vertical-offset="0" max-vertical-offset="714">
@@ -1451,26 +1389,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/MatchGoal.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/PenaltyCard.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25074628" vertical-offset="0" max-vertical-offset="670">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/MatchFoul.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="714">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="438" max-vertical-offset="966">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="1232">
-          <caret line="387" column="22" selection-start-line="387" selection-start-column="22" selection-end-line="387" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="575" max-vertical-offset="1232">
+          <caret line="389" column="5" selection-start-line="389" selection-start-column="5" selection-end-line="389" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
@@ -1491,10 +1445,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/MatchFoul.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="462">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/PenaltyCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="42" max-vertical-offset="1288">
+          <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
+          <folding>
+            <element signature="n#dependency#0;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#1;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#2;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#3;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#4;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#5;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#6;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#7;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#8;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#9;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+            <element signature="n#dependency#10;n#dependencies#0;n#project#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="2086">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#addFoul#0;class#DataDB#0" expanded="false" />
+            <element signature="method#addGoal#0;class#DataDB#0" expanded="false" />
+            <element signature="method#addPlayerCard#0;class#DataDB#0" expanded="false" />
+            <element signature="method#addPlayer#0;class#DataDB#0" expanded="false" />
+            <element signature="e#3610#3618#0" expanded="true" />
+            <element signature="e#3682#3699#0" expanded="true" />
+            <element signature="e#3762#3779#0" expanded="true" />
+            <element signature="e#3842#3859#0" expanded="true" />
+            <element signature="e#3922#3939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1168" max-vertical-offset="1638">
-          <caret line="200" column="41" selection-start-line="200" selection-start-column="41" selection-end-line="200" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.7601713" vertical-offset="1241" max-vertical-offset="1764">
+          <caret line="223" column="9" selection-start-line="223" selection-start-column="9" selection-end-line="223" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
@@ -1504,64 +1521,6 @@
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/PenaltyCard.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="308">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80701756" vertical-offset="42" max-vertical-offset="462">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/PenaltyCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="588">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/MatchGoal.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate-mappings/MatchFoul.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="322">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.66519827" vertical-offset="1310" max-vertical-offset="2520">
-          <caret line="102" column="131" selection-start-line="102" selection-start-column="131" selection-end-line="102" selection-end-column="131" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addFoul#0;class#DataDB#0" expanded="false" />
-            <element signature="method#addPlayer#0;class#DataDB#0" expanded="false" />
-            <element signature="e#3610#3618#0" expanded="true" />
-            <element signature="e#3682#3699#0" expanded="true" />
-            <element signature="e#3762#3779#0" expanded="true" />
-            <element signature="e#3842#3859#0" expanded="true" />
-            <element signature="e#3922#3939#0" expanded="true" />
           </folding>
         </state>
       </provider>

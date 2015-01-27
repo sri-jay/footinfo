@@ -15,8 +15,8 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="player in  team_a">
-				<a><td class="team-a">{{player.player_name}}</td></a>
-				<a><td class="team-b">{{team_b[$index].player_name}}</td></a>
+				<td class="team-a"><a href="#player/{{player.player_id}}/{{participant_a}}/{{ player.player_name }}">{{player.player_name}}</a></td>
+				<td class="team-b"><a href="#player/{{player.player_id}}/{{participant_b}}/{{ player.player_name }}">{{team_b[$index].player_name}}</a></td>
 			</tr>
 		</tbody>
 	</table>
@@ -59,7 +59,7 @@
 	</div>
 
 	<div class="ui segment">
-		<h1 class="ui red dividing header">Player Card</h1>
+		<h1 class="ui orange dividing header">Player Card</h1>
 		<form class="ui red form" ng-submit="playerCard()">
 			<div class="field">
 					<div class="ui fluid search selection dropdown">
@@ -91,4 +91,37 @@
 		</form>
 	</div>
 
+	<div class="ui segment">
+		<h1 class="ui green diving header">Player Goal</h1>
+		<form class="ui basic form" ng-submit="matchGoal()">
+			<div class="field">
+					<div class="ui fluid search selection dropdown">
+						<input type="hidden" id="scoredBy" name="player_id"/>
+						<div class="default text">Select Player Name</div>
+						<div class="menu">
+							<div class="item" ng-repeat="player in team_b" data-value="{{player.player_id}}">
+								{{player.player_name}}
+							</div>
+
+							<div class="item" ng-repeat="player in team_a" data-value="{{player.player_id}}">
+								{{player.player_name}}
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="field">
+				<div class="ui fluid search selection dropdown">
+					<input type="hidden" id="goalType" />
+					<div class="default text">Goal Type</div>
+					<div class="menu">
+						<div class="inverted orange item" data-value="penalty">Penalty</div>
+						<div class="inverted red item" data-value="header">Header</div>
+						<div class="inverted red item" data-value="kick">Kick</div>
+					</div>
+				</div>	
+			</div>
+			<button type="submit" class="ui massive fluid green inverted button">Add Goal</button>
+		</form>
+	</div>
+	<button class="ui massive fluid youtube button" id="end-match" ng-click="finishMatch()">End Match</button>
 </div>

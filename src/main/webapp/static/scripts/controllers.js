@@ -1,6 +1,6 @@
 var footinfo = angular.module('footinfo', ['ngRoute', 'ngAnimate', 'n3-line-chart']);
 
-// Config
+// ANGULAR CONFIG
 footinfo.config(['$routeProvider', function ($routeProvider){
     $routeProvider.when("/a",{
         controller: "teamOverviewController",
@@ -27,7 +27,7 @@ footinfo.config(['$routeProvider', function ($routeProvider){
     });
 }]);
 
-// Factory
+// FACTORY
 footinfo.factory("apiFactory",['$http', function($http){
     var factory = {};
     factory.addTeam =  function (teamData) {
@@ -112,6 +112,18 @@ footinfo.factory("apiFactory",['$http', function($http){
         });
     };
 
+    factory.matchGoal = function (scoredBy, goalType, matchId) {
+        return $http({
+            method: 'POST',
+            url: 'http://localhost:8080/footinfo/v1/api/matchGoal',
+            data: {
+                'scored_by' : scoredBy,
+                'goal_type': goalType,
+                'match_id' : matchId
+            }
+        });
+    };
+
     factory.getPlayerStats = function (playerId) {
         return $http({
             method: 'POST',
@@ -127,6 +139,7 @@ footinfo.factory("apiFactory",['$http', function($http){
 // CONTROLLERS
 footinfo.controller('teamOverviewController', function (apiFactory, $log, $scope){
     $scope.announcement = "Team Controls";
+
     $scope.addTeam = function () {
         var teamData = {
             "teamName" : $scope.teamName,
@@ -158,6 +171,9 @@ footinfo.controller('teamOverviewController', function (apiFactory, $log, $scope
             $scope.teams = response.teams[0];
         });
     };
+
+    // Populate table on load of view.
+    $scope.getAllTeams();
 });
 
 footinfo.controller('matchOverviewController', function (apiFactory, $log, $scope){
@@ -194,23 +210,6 @@ footinfo.controller('matchOverviewController', function (apiFactory, $log, $scop
         });
     }
 
-    $scope.finishMatch = function ($event, match_id) {
-        function setStyles() {
-            $event.target.classList.add("green");
-            $event.target.classList.add("disabled");
-            $event.target.classList.remove("red");
-            $event.target.classList.remove("inverted");
-            $event.target.classList.remove("animated");
-            $event.target.innerHTML = "Finished";
-            $event.target.parentNode.parentNode.getElementsByClassName("match-status")[0].innerHTML = "finished";
-        }
-        apiFactory.finishGame(match_id).success(function (response){
-            if(response.status == "succeeded") {
-                setStyles();
-            }
-        });
-    };
-
     $scope.getGameStatuses();
 });
 
@@ -245,6 +244,7 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope, $rout
         var foulOn = document.getElementById("foulOn").value;
         
         apiFactory.playerFoul(commitedBy, foulOn, $scope.match_id).success(function (response) {
+            $log.log(response);
             if(response["status"] == "succeeded") {
                 swal({
                     type: 'success',
@@ -270,17 +270,60 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope, $rout
             }
         });
     };
+
+    $scope.matchGoal = function () {
+        var scoredBy = document.getElementById("scoredBy").value;
+        var goalType = document.getElementById("goalType").value;
+
+        apiFactory.matchGoal(scoredBy, goalType, $scope.matchId).success(function (response){
+            if(response["status"] == "succeeded") {
+                swal({
+                    type: 'success',
+                    title: 'Goal!',
+                    text: 'Goal has been recorded.'
+                });
+            }
+        });
+    };
+
+    $scope.finishMatch = function () {
+        swal({
+                type: "warning",
+                title: "End Game?",
+                text: "Are You sure?",
+                showCancelButton: true,
+                confirmButtonText: "End Game.",
+                closeOnConfirm: false,
+            },
+            function() {
+                apiFactory.finishGame($scope.match_id).success(function (response){
+                  if(response.status == "succeeded") {
+                        swal({
+                            type: 'success',
+                            title: 'Game Ended!',
+                            text: 'Game has finished!'
+                        });
+                    }
+                });
+            }
+        );
+    };
 });
 
 footinfo.controller('playerStatsController', function (apiFactory, $log, $scope, $routeParams){
     $scope.playerName = $routeParams.player_name;
     $scope.playerTeam = $routeParams.player_team;
-    
+
     apiFactory.getPlayerStats($routeParams.player_id).success(function (response){
 
         var graphData = [];
         var matchLabels = [];        
         $log.log(response);
+
+        $scope.totalGoals = 0;
+        $scope.totalRedCards = 0;
+        $scope.totalYellowCards = 0;
+        $scope.totalFouls = 0
 
         for(var counter=0;counter<response.length;counter++){
             for(var game in response[counter]){
@@ -292,11 +335,16 @@ footinfo.controller('playerStatsController', function (apiFactory, $log, $scope,
                 datum.fouls = response[counter][game][1].fouls;
                 datum.yellow_cards = response[counter][game][2].yellow_cards;
                 datum.red_cards = response[counter][game][3].red_cards;            
-            
+                
+                $scope.totalGoals += parseInt(datum.goals);
+                $scope.totalRedCards += parseInt(datum.red_cards);
+                $scope.totalYellowCards += parseInt(datum.yellow_cards);
+                $scope.totalFouls += parseInt(datum.fouls);
+
                 graphData.push(datum);
             }
         }
-
+        
         // Assign data to scope for n3.
         $scope.data = graphData;
 

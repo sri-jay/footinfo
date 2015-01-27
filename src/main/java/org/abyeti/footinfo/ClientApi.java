@@ -202,12 +202,12 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response matchGoal(ApiDataModels.MatchGoal goal) {
         try {
-            DataDB.addGoal(goal.goal_type, goal.scored_by, goal.goal_time, goal.match_id);
-            return Response.status(200).entity("{\'status\' : \'succeeded\'}").build();
+            DataDB.addGoal(goal.goal_type, goal.scored_by, new DateTime().toString(), goal.match_id);
+            return Response.status(200).entity("{\"status\" : \"succeeded\"}").build();
         }
         catch (Exception e){
             e.printStackTrace();
-            return Response.status(500).entity("{\'status\' : \'failed\'}").build();
+            return Response.status(500).entity("{\"status\" : \"failed\"}").build();
         }
     }
 
@@ -224,7 +224,7 @@ public class ClientApi {
         }
         catch (Exception e){
             e.printStackTrace();
-            return Response.status(500).entity("{\'status\' : \'failed\'}").build();
+            return Response.status(500).entity("{\"status\" : \"failed\"}").build();
         }
     }
 }
