@@ -7,10 +7,12 @@ public class EventFeed {
     private int id;
     private String matchId;
     private String eventText;
+    private String eventType;
 
-    public EventFeed(String matchId, String eventText) {
+    public EventFeed(String matchId, String eventText, String eventType) {
         this.matchId = matchId;
         this.eventText = eventText;
+        this.eventType = eventType;
     }
 
     public int getId() {
@@ -25,6 +27,8 @@ public class EventFeed {
         return eventText;
     }
 
+    public String getEventType() { return eventType; }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -36,4 +40,6 @@ public class EventFeed {
     public void setEventText(String eventText) {
         this.eventText = eventText;
     }
+
+    public void setEventType(String eventType) { this.eventType = eventType; }
 }

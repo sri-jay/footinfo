@@ -233,6 +233,7 @@ public class ClientApi {
         try {
             FootDB db = new FootDB();
             System.out.println(db.getStartTime("7d67eeee-9a63-4356-b2af-5921fdd5698f"));
+            DataDB.getTopFeed();
         }
         catch (Exception e) {
             e.printStackTrace();

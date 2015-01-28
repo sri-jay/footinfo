@@ -32,7 +32,7 @@ public class DataDB {
             session.close();
             sf.close();
             FootDB db = new FootDB();
-            DataDB.createEntryInLog(mId, String.format("%s fould %s at %s", db.getPlayerName(cB), db.getPlayerName(fO), Minutes.minutesBetween(new DateTime(), new DateTime(fT))));
+            DataDB.createEntryInLog(mId, String.format("%s fould %s at %s", db.getPlayerName(cB), db.getPlayerName(fO), Minutes.minutesBetween(new DateTime(), new DateTime(fT))), "match_foul");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -51,7 +51,7 @@ public class DataDB {
             session.close();
             sf.close();
             FootDB db = new FootDB();
-            DataDB.createEntryInLog(matchId, String.format("%s scored a %s at %s for %s.", db.getPlayerName(scoredBy), goalType, goalTime, db.getTeamName(teamId)));
+            DataDB.createEntryInLog(matchId, String.format("%s scored a %s at %s for %s.", db.getPlayerName(scoredBy), goalType, goalTime, db.getTeamName(teamId)), "player_goal");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -71,7 +71,7 @@ public class DataDB {
             session.close();
             sf.close();
             FootDB db = new FootDB();
-            DataDB.createEntryInLog(matchId, String.format("%s was awarded %s card.",db.getPlayerName(awardedTo), cardType));
+            DataDB.createEntryInLog(matchId, String.format("%s was awarded %s card.",db.getPlayerName(awardedTo), cardType), "player_card");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -207,13 +207,13 @@ public class DataDB {
         }
     }
 
-    public static void createEntryInLog(String matchId, String text) throws Exception {
+    public static void createEntryInLog(String matchId, String text, String eventType) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
 
             tx = session.beginTransaction();
-            session.save(new EventFeed(matchId, text));
+            session.save(new EventFeed(matchId, text, eventType));
             tx.commit();
 
             session.close();
@@ -247,10 +247,18 @@ public class DataDB {
             Map<String, String> verdict = new LinkedHashMap<>();
 
             verdict.put("status", "succeeded");
-            Object[] participants = goalCount.keySet().toArray();
+            String[] participants = db.getParticipants(matchId);
 
-            String teamAId = participants[0].toString();
-            String teamBId = participants[1].toString();
+            String teamAId = participants[0];
+            String teamBId = participants[1];
+
+            // Match has no events
+            if(!goalCount.containsKey(teamAId))
+                goalCount.put(teamAId, 0);
+
+            if(!goalCount.containsKey(teamBId))
+                goalCount.put(teamBId, 0);
+
 
             if(goalCount.get(teamAId) > goalCount.get(teamBId)) {
                 verdict.put("win", db.getTeamName(teamAId));
@@ -260,6 +268,8 @@ public class DataDB {
             }
 
             else if(goalCount.get(teamAId) == goalCount.get(teamBId)) {
+                verdict.put("team_a", db.getTeamName(teamAId));
+                verdict.put("team_b", db.getTeamName(teamBId));
                 verdict.put("tie", goalCount.get(participants[0]).toString());
             }
 
@@ -278,6 +288,69 @@ public class DataDB {
         catch (Exception e){
             e.printStackTrace();
             return new LinkedHashMap<>();
+        }
+    }
+
+    public static JSONArray getMatchFeed(String matchId) throws Exception {
+        try {
+            sf = new Configuration().configure().buildSessionFactory();
+            session = sf.openSession();
+
+            tx = session.beginTransaction();
+            final String getMatchFeed = String.format("SELECT event_text, event_type FROM event_feed WHERE match_id=\'%s\' ORDER BY id DESC;", matchId);
+
+            JSONArray matchFeed = new JSONArray();
+
+            for(Object row : session.createSQLQuery(getMatchFeed).list()) {
+                Object[] columns = (Object[]) row;
+                matchFeed.put(
+                        new JSONObject().put("event_text", columns[0].toString())
+                                        .put("event_type", columns[1].toString())
+                );
+            }
+            tx.commit();
+
+            session.close();
+            sf.close();
+
+            System.out.println(matchFeed.toString());
+            return matchFeed;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    public static JSONArray getTopFeed() throws Exception {
+        try {
+            sf = new Configuration().configure().buildSessionFactory();
+            session = sf.openSession();
+
+            tx = session.beginTransaction();
+            final String getMatchFeed = String.format("SELECT event_text, event_type, match_id FROM event_feed WHERE ORDER BY id DESC LIMIT 6;");
+
+            JSONArray matchFeed = new JSONArray();
+
+            for(Object row : session.createSQLQuery(getMatchFeed).list()) {
+                Object[] columns = (Object[]) row;
+                matchFeed.put(
+                        new JSONObject().put("event_text", columns[0].toString())
+                                .put("event_type", columns[1].toString())
+                                .put("match_id", columns[2].toString())
+                );
+            }
+            tx.commit();
+
+            session.close();
+            sf.close();
+
+            System.out.println(matchFeed.toString());
+            return matchFeed;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return null;
         }
     }
 }

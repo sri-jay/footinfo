@@ -214,7 +214,7 @@ public class FootDB {
                             .toString()
             );
 
-            DataDB.createEntryInLog(matchId,String.format("%s vs %s has started at %s", tA, tB, startTime));
+            DataDB.createEntryInLog(matchId,String.format("%s vs %s has started at %s", tA, tB, startTime), "match_start");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -343,16 +343,18 @@ public class FootDB {
 
         if(verdict.containsKey("win")){
             DataDB.createEntryInLog(matchId,
-                    String.format("%s vs %s has %v wins by %i goals.",
-
+                String.format("%s vs %s : %s wins by %d goals.",
                     verdict.get("win"),
                     verdict.get("loss"),
-                    Integer.parseInt(verdict.get("win_goals")) - Integer.parseInt(verdict.get("loss_goals"))
-            ));
+                    verdict.get("win"),
+                    Math.abs(Integer.parseInt(verdict.get("win_goals")) - Integer.parseInt(verdict.get("loss_goals")))
+                ),
+                "match_finish"
+            );
         }
 
         else if(verdict.containsKey("tie")) {
-            DataDB.createEntryInLog(matchId, String.format("%s vs %s has ended in a tie! %i - %i", verdict.get("tie")));
+            DataDB.createEntryInLog(matchId, String.format("%s vs %s has ended in a tie! %s - %s", verdict.get("team_b"), verdict.get("team_a"),verdict.get("tie"), verdict.get("tie")), "match_finish");
         }
 
     if(response.getStatus() == 204 && verdict.containsKey("status")){
@@ -394,7 +396,7 @@ public class FootDB {
     }
 
     public String[] getParticipants(String matchId) throws Exception {
-        final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return a.team_name,b.team_name \" }] }", matchId);
+        final String cipherQuery = String.format("{ \"statements\" : [{ \"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return a.team_id,b.team_id \" }] }", matchId);
         WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
         ClientResponse response = res
                 .accept(MediaType.APPLICATION_JSON)

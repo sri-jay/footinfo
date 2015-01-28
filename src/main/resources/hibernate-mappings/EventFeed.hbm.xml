@@ -12,5 +12,6 @@
 
         <property name="matchId" column="match_id" type="text"/>
         <property name="eventText" column="event_text" type="text"/>
+        <property name="eventType" column="event_type" type="text"/>
     </class>
 </hibernate-mapping>
