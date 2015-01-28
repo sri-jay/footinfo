@@ -1,11 +1,10 @@
 package org.abyeti.footinfo.db;
 
-import org.abyeti.footinfo.db.ObjectMappings.MatchFoul;
-import org.abyeti.footinfo.db.ObjectMappings.MatchGoal;
-import org.abyeti.footinfo.db.ObjectMappings.PenaltyCard;
-import org.abyeti.footinfo.db.ObjectMappings.PlayerData;
+import org.abyeti.footinfo.db.ObjectMappings.*;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
+import org.joda.time.DateTime;
+import org.joda.time.Minutes;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -21,7 +20,7 @@ public class DataDB {
     private static Transaction tx;
 
     // Add data to BD
-    public static void addFoul(String cB, String fO, String fT, String mId) {
+    public static void addFoul(String cB, String fO, String fT, String mId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -32,30 +31,34 @@ public class DataDB {
             tx.commit();
             session.close();
             sf.close();
+            FootDB db = new FootDB();
+            DataDB.createEntryInLog(mId, String.format("%s fould %s at %s", db.getPlayerName(cB), db.getPlayerName(fO), Minutes.minutesBetween(new DateTime(), new DateTime(fT))));
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void addGoal(String goalType, String scoredBy, String goalTime, String matchId) {
+    public static void addGoal(String goalType, String scoredBy, String goalTime, String matchId, String teamId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
 
             tx = session.beginTransaction();
-            session.save(new MatchGoal(goalType, scoredBy, goalTime, matchId));
+            session.save(new MatchGoal(goalType, scoredBy, goalTime, matchId, teamId));
             tx.commit();
 
             session.close();
             sf.close();
+            FootDB db = new FootDB();
+            DataDB.createEntryInLog(matchId, String.format("%s scored a %s at %s for %s.", db.getPlayerName(scoredBy), goalType, goalTime, db.getTeamName(teamId)));
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void addPlayerCard(String awardedTo, String cardType, String matchId) {
+    public static void addPlayerCard(String awardedTo, String cardType, String matchId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -67,13 +70,15 @@ public class DataDB {
 
             session.close();
             sf.close();
+            FootDB db = new FootDB();
+            DataDB.createEntryInLog(matchId, String.format("%s was awarded %s card.",db.getPlayerName(awardedTo), cardType));
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void addPlayer(String playerId, String dob, String country, Blob picture) {
+    public static void addPlayer(String playerId, String dob, String country, Blob picture) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -90,7 +95,7 @@ public class DataDB {
         }
     }
 
-    public static JSONArray getPlayerStats(String playerId) {
+    public static JSONArray getPlayerStats(String playerId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -199,6 +204,80 @@ public class DataDB {
         catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public static void createEntryInLog(String matchId, String text) throws Exception {
+        try {
+            sf = new Configuration().configure().buildSessionFactory();
+            session = sf.openSession();
+
+            tx = session.beginTransaction();
+            session.save(new EventFeed(matchId, text));
+            tx.commit();
+
+            session.close();
+            sf.close();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static Map<String, String> getGameVerdict(String matchId) throws Exception {
+        try {
+            sf = new Configuration().configure().buildSessionFactory();
+
+            final String getGoals = String.format("SELECT team_id FROM match_goal WHERE match_id=\'%s\';", matchId);
+
+            session = sf.openSession();
+            tx = session.beginTransaction();
+
+            Map<String, Integer> goalCount = new LinkedHashMap<>();
+
+            for(Object row : session.createSQLQuery(getGoals).list()) {
+                if(!goalCount.containsKey(row.toString()))
+                    goalCount.put(row.toString(), 1);
+                else
+                    goalCount.put(row.toString(), goalCount.get(row.toString()) + 1);
+            }
+
+            FootDB db = new FootDB();
+
+            Map<String, String> verdict = new LinkedHashMap<>();
+
+            verdict.put("status", "succeeded");
+            Object[] participants = goalCount.keySet().toArray();
+
+            String teamAId = participants[0].toString();
+            String teamBId = participants[1].toString();
+
+            if(goalCount.get(teamAId) > goalCount.get(teamBId)) {
+                verdict.put("win", db.getTeamName(teamAId));
+                verdict.put("loss", db.getTeamName(teamBId));
+                verdict.put("win_goals", goalCount.get(teamAId).toString());
+                verdict.put("loss_goals", goalCount.get(teamBId).toString());
+            }
+
+            else if(goalCount.get(teamAId) == goalCount.get(teamBId)) {
+                verdict.put("tie", goalCount.get(participants[0]).toString());
+            }
+
+            else {
+                verdict.put("win", db.getTeamName(teamAId));
+                verdict.put("loss", db.getTeamName(teamBId));
+                verdict.put("win_goals", goalCount.get(teamAId).toString());
+                verdict.put("loss_goals", goalCount.get(teamBId).toString());
+            }
+
+            tx.commit();
+            session.close();
+
+            return verdict;
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return new LinkedHashMap<>();
         }
     }
 }

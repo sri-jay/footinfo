@@ -205,12 +205,16 @@ public class FootDB {
             URI nodeB = new URI(teamBData.getString("self"));
 
             // The Relation between teams A and B is now A vs B, i.e the match is ongoing
+            String matchId = UUID.randomUUID().toString();
+            String startTime = new DateTime().toString();
             addRelationship(nodeA, nodeB, Relationships.VERSUS, new JSONObject()
-                            .append("match_id", UUID.randomUUID().toString())
+                            .append("match_id", matchId)
                             .append("match_status", "ongoing")
-                            .append("start_time", new DateTime().toString())
+                            .append("start_time", startTime)
                             .toString()
             );
+
+            DataDB.createEntryInLog(matchId,String.format("%s vs %s has started at %s", tA, tB, startTime));
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -275,8 +279,7 @@ public class FootDB {
             JSONArray row = jsonDump.getJSONObject(i).getJSONArray("row");
             JSONObject dat = new JSONObject()
                     .accumulate("player_name", row.getJSONObject(0).getString("name"))
-                    .accumulate("player_id", row.getJSONObject(0).getString("player_id"))
-                    .accumulate("club_name", row.getJSONObject(1).getString("team_name"));
+                    .accumulate("player_id", row.getJSONObject(0).getString("player_id"));
 
             players.put(dat);
         }
@@ -336,7 +339,23 @@ public class FootDB {
                 .entity("[\"finished\"]")
                 .put(ClientResponse.class);
 
-        if(response.getStatus() == 204){
+        Map<String, String> verdict = DataDB.getGameVerdict(matchId);
+
+        if(verdict.containsKey("win")){
+            DataDB.createEntryInLog(matchId,
+                    String.format("%s vs %s has %v wins by %i goals.",
+
+                    verdict.get("win"),
+                    verdict.get("loss"),
+                    Integer.parseInt(verdict.get("win_goals")) - Integer.parseInt(verdict.get("loss_goals"))
+            ));
+        }
+
+        else if(verdict.containsKey("tie")) {
+            DataDB.createEntryInLog(matchId, String.format("%s vs %s has ended in a tie! %i - %i", verdict.get("tie")));
+        }
+
+    if(response.getStatus() == 204 && verdict.containsKey("status")){
             return true;
         }
 
@@ -363,7 +382,12 @@ public class FootDB {
         JSONArray teamAData = getTeamData(row.getString(0));
         JSONArray teamBData = getTeamData(row.getString(1));
 
-        JSONObject data = new JSONObject().accumulate("team_a", teamAData).accumulate("team_b", teamBData).accumulate("status", "succeeded");
+        JSONObject data = new JSONObject()
+                .accumulate("team_a", teamAData)
+                .accumulate("team_a_id", row.getString(0))
+                .accumulate("team_b", teamBData)
+                .accumulate("team_b_id", row.getString(1))
+                .accumulate("status", "succeeded");
 
         System.out.println(data.toString());
         return data;
@@ -387,5 +411,54 @@ public class FootDB {
         participants[0] = row.getString(0);
         participants[1] = row.getString(1);
         return participants;
+    }
+
+    public String getPlayerName(String playerId) throws Exception {
+
+        System.out.println(playerId );
+        final String cipherQuery = String.format("{\"statements\" : [{\"statement\" : \"match (n) where n.player_id=\'%s\' return n.name \"}]}",playerId);
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(cipherQuery)
+                .post(ClientResponse.class);
+
+        String responseData = response.getEntity(String.class);
+        System.out.println(responseData);
+        JSONArray row  = new JSONObject(responseData).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row");
+
+        return row.getString(0);
+    }
+
+    public String getTeamName(String teamId) throws Exception {
+        System.out.println(teamId);
+        final String cipherQuery = String.format("{\"statements\" : [{\"statement\" : \"match (n) where n.team_id=\'%s\' return n\"}]}", teamId);
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(cipherQuery)
+                .post(ClientResponse.class);
+
+        String responseData = response.getEntity(String.class);
+        System.out.println(responseData);
+        JSONArray row  = new JSONObject(responseData).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row");
+        return row.getJSONObject(0).getString("team_name");
+    }
+
+    public String getStartTime(String matchId) throws Exception {
+        final String cipherQuery = String.format("{\"statements\" : [{\"statement\" : \"match (a)-[r:VERSUS]->(b) where r.match_id=[\'%s\'] return r.start_time\"}]}",matchId);
+        WebResource res = Client.create().resource(RAW_CIPHER_AUTOCOMMIT);
+        ClientResponse response = res
+                .accept(MediaType.APPLICATION_JSON)
+                .type(MediaType.APPLICATION_JSON)
+                .entity(cipherQuery)
+                .post(ClientResponse.class);
+
+        String responseData = response.getEntity(String.class);
+        System.out.println(responseData);
+        JSONArray row  = new JSONObject(responseData).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row");
+        return row.getJSONArray(0).getString(0);
     }
 }

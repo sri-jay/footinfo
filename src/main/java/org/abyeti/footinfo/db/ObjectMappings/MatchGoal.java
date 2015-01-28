@@ -15,12 +15,14 @@ public class MatchGoal {
     private String scoredBy;
     private String goalTime;
     private String matchId;
+    private String teamId;
 
-    public MatchGoal(String gT, String sB, String gTime, String mId) {
-        goalType = gT;
-        scoredBy = sB;
-        goalTime = gTime;
-        matchId = mId;
+    public MatchGoal(String goalType, String scoredBy, String goalTime, String matchId, String teamId) {
+        this.goalType = goalType;
+        this.scoredBy = scoredBy;
+        this.goalTime = goalTime;
+        this.matchId = matchId;
+        this.teamId = teamId;
     }
 
     public int getId() {
@@ -43,6 +45,8 @@ public class MatchGoal {
         return matchId;
     }
 
+    public String getTeamId() { return teamId; }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -62,4 +66,6 @@ public class MatchGoal {
     public void setMatchId(String matchId) {
         this.matchId = matchId;
     }
+
+    public void setTeamId(String teamId) { this.teamId = teamId; }
 }

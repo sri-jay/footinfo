@@ -24,5 +24,6 @@
         <mapping resource="hibernate-mappings/MatchGoal.hbm.xml"></mapping>
         <mapping resource="hibernate-mappings/PenaltyCard.hbm.xml"></mapping>
         <mapping resource="hibernate-mappings/PlayerData.hbm.xml"></mapping>
+        <mapping resource="hibernate-mappings/EventFeed.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

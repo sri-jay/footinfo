@@ -99,11 +99,11 @@
 						<input type="hidden" id="scoredBy" name="player_id"/>
 						<div class="default text">Select Player Name</div>
 						<div class="menu">
-							<div class="item" ng-repeat="player in team_b" data-value="{{player.player_id}}">
+							<div class="item" ng-repeat="player in team_b" data-value="{{player.player_id}},{{team_b_id}}">
 								{{player.player_name}}
 							</div>
 
-							<div class="item" ng-repeat="player in team_a" data-value="{{player.player_id}}">
+							<div class="item" ng-repeat="player in team_a" data-value="{{player.player_id}},{{team_b_id}}">
 								{{player.player_name}}
 							</div>
 						</div>

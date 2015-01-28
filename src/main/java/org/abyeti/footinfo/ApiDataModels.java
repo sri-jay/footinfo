@@ -58,5 +58,6 @@ public class ApiDataModels {
         public String goal_type;
         public String scored_by;
         public String match_id;
+        public String team_id;
     }
 }

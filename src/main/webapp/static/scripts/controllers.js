@@ -112,14 +112,15 @@ footinfo.factory("apiFactory",['$http', function($http){
         });
     };
 
-    factory.matchGoal = function (scoredBy, goalType, matchId) {
+    factory.matchGoal = function (scoredBy, goalType, matchId, teamId) {
         return $http({
             method: 'POST',
             url: 'http://localhost:8080/footinfo/v1/api/matchGoal',
             data: {
                 'scored_by' : scoredBy,
                 'goal_type': goalType,
-                'match_id' : matchId
+                'match_id' : matchId,
+                'team_id' : teamId
             }
         });
     };
@@ -162,7 +163,7 @@ footinfo.controller('teamOverviewController', function (apiFactory, $log, $scope
                     text: "Something went wrong."
                 });
             }
-        });      
+         });      
         $scope.getAllTeams();
     };
 
@@ -235,6 +236,8 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope, $rout
             $log.log(response);
             $scope.team_a = response.team_a[0];
             $scope.team_b = response.team_b[0];
+            $scope.team_a_id = response.team_a_id;
+            $scope.team_b_id = response.team_b_id;
     });
 
     $scope.playerFoul = function () {   
@@ -255,7 +258,7 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope, $rout
         });
     };
 
-    $scope.playerCard = function () {
+    $scope.playerCard = function () {   
         // Angular will not bind to hidden elements
         var awardedTo = document.getElementById("awardedTo").value;
         var cardType = document.getElementById("playerCardType").value;
@@ -272,10 +275,11 @@ footinfo.controller('matchController', function (apiFactory, $log, $scope, $rout
     };
 
     $scope.matchGoal = function () {
-        var scoredBy = document.getElementById("scoredBy").value;
+        var data = document.getElementById("scoredBy").value.split(",");
+     
         var goalType = document.getElementById("goalType").value;
 
-        apiFactory.matchGoal(scoredBy, goalType, $scope.matchId).success(function (response){
+        apiFactory.matchGoal(data[0], goalType, $scope.match_id, data[1]).success(function (response){
             if(response["status"] == "succeeded") {
                 swal({
                     type: 'success',

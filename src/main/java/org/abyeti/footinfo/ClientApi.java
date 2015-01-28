@@ -9,7 +9,6 @@ import org.json.JSONObject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.crypto.Data;
 
 @Path("/api")
 public class ClientApi {
@@ -202,7 +201,7 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response matchGoal(ApiDataModels.MatchGoal goal) {
         try {
-            DataDB.addGoal(goal.goal_type, goal.scored_by, new DateTime().toString(), goal.match_id);
+            DataDB.addGoal(goal.goal_type, goal.scored_by, new DateTime().toString(), goal.match_id, goal.team_id);
             return Response.status(200).entity("{\"status\" : \"succeeded\"}").build();
         }
         catch (Exception e){
@@ -225,6 +224,18 @@ public class ClientApi {
         catch (Exception e){
             e.printStackTrace();
             return Response.status(500).entity("{\"status\" : \"failed\"}").build();
+        }
+    }
+
+    @POST
+    @Path("/test")
+    public void testEndpoint() {
+        try {
+            FootDB db = new FootDB();
+            System.out.println(db.getStartTime("7d67eeee-9a63-4356-b2af-5921fdd5698f"));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

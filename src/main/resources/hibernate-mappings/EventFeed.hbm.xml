@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class name="org.abyeti.footinfo.db.ObjectMappings.MatchGoal" table="match_goal">
+    <class name="org.abyeti.footinfo.db.ObjectMappings.EventFeed" table="event_feed">
         <meta attribute="class-description">
-            Class that holds goals made during a match.
+            Event Feed from which front end info can be extracted.
         </meta>
 
         <id name="id" type="int" column="id">
             <generator class="native"/>
         </id>
 
-        <property name="goalType" column="goal_type" type="text"/>
-        <property name="scoredBy" column="scored_by" type="text"/>
-        <property name="goalTime" column="goal_time" type="text"/>
         <property name="matchId" column="match_id" type="text"/>
-        <property name="teamId" column="team_id" type="text"/>
+        <property name="eventText" column="event_text" type="text"/>
     </class>
 </hibernate-mapping>
