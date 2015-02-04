@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.abyeti.footinfo.db.ObjectMappings.AuthCodes" table="auth_codes">
+        <meta attribute="class-description">
+            Event Feed from which front end info can be extracted.
+        </meta>
+
+        <id name="id" type="int" column="id">
+            <generator class="native"/>
+        </id>
+
+        <property name="authCode" column="auth_code" type="text"/>
+    </class>
+</hibernate-mapping>

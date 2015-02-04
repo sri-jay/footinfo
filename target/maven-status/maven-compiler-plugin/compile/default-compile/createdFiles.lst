@@ -1,5 +1,7 @@
+org\abyeti\footinfo\db\ObjectMappings\AuthCodes.class
 org\abyeti\footinfo\ApiDataModels$PlayerFoul.class
 org\abyeti\footinfo\db\FootDB$Relationships.class
+org\abyeti\footinfo\ApiDataModels$AdminAuth.class
 org\abyeti\footinfo\db\FootDB.class
 org\abyeti\footinfo\ApiDataModels$CreateGameModel.class
 org\abyeti\footinfo\ApiDataModels$PlayerCard.class

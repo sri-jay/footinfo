@@ -20,10 +20,11 @@
             root
         </property>
 
-        <mapping resource="hibernate-mappings/MatchFoul.hbm.xml"></mapping>
-        <mapping resource="hibernate-mappings/MatchGoal.hbm.xml"></mapping>
-        <mapping resource="hibernate-mappings/PenaltyCard.hbm.xml"></mapping>
-        <mapping resource="hibernate-mappings/PlayerData.hbm.xml"></mapping>
-        <mapping resource="hibernate-mappings/EventFeed.hbm.xml"></mapping>
+        <mapping resource="hibernate-mappings/MatchFoul.hbm.xml"/>
+        <mapping resource="hibernate-mappings/MatchGoal.hbm.xml"/>
+        <mapping resource="hibernate-mappings/PenaltyCard.hbm.xml"/>
+        <mapping resource="hibernate-mappings/PlayerData.hbm.xml"/>
+        <mapping resource="hibernate-mappings/EventFeed.hbm.xml"/>
+        <mapping resource="hibernate-mappings/AuthCodes.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

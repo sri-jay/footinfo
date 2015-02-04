@@ -1,17 +1,27 @@
 package org.abyeti.footinfo;
 
+import com.unboundid.ldap.sdk.*;
 import org.abyeti.footinfo.db.DataDB;
 import org.abyeti.footinfo.db.FootDB;
 import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import javax.net.SocketFactory;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.UUID;
 
 @Path("/api")
 public class ClientApi {
+
+    private final String defaultParentDn = "dc=example,dc=com";
+    private final String loginDn = "uid=admin,ou=system";
+    private final String password = "secret";
+    private final int ldapPort = 10389;
+    private final String ldapDomain = "localhost";
+    private SocketFactory sfact = null;
 
     @POST
     @Path("/addTeam")
@@ -239,4 +249,70 @@ public class ClientApi {
             e.printStackTrace();
         }
     }
+
+    @POST
+    @Path("/authAdmin")
+    public Response authAdmin(ApiDataModels.AdminAuth cred) {
+        try {
+            if(authUser(cred.password, cred.username, "footInfoAdmins")) {
+                return Response.status(200).entity(String.format("{\"status\" : \"ok\", \"auth_code\" : \"%s\"}", getAuthCode())).build();
+            }
+            return Response.status(200).entity("{\"status\" : \"not_authenticated\", \"auth_code\" : \"%s\"}").build();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(200).entity("{\"status\" : \"skrew u\"}").build();
+        }
+    }
+
+    public boolean authUser(String password, String uid, String orgName) {
+        try {
+            LDAPConnection connection = getConnection();
+            final String orgDn = String.format("o=%s,dc=example,dc=com", orgName);
+            System.out.println(orgDn);
+
+
+            SearchResult res = connection.search(new SearchRequest(
+                    orgDn, SearchScope.SUB, Filter.createEqualityFilter("userPassword", password)
+            ));
+
+            for(SearchResultEntry ent : res.getSearchEntries()){
+                System.out.println(ent.toString());
+            }
+            System.out.println(res.getEntryCount());
+
+            if(res.getEntryCount() == 1)
+                return true;
+            else
+                return false;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public LDAPConnection getConnection()  throws Exception {
+        if(sfact == null) {
+            sfact = SocketFactory.getDefault();
+            System.out.println("Creating socket factory!");
+        }
+
+        LDAPConnection connection = new LDAPConnection(sfact, ldapDomain, ldapPort);
+        BindResult result = connection.bind(new SimpleBindRequest(loginDn, password));
+
+        if(result.getResultCode() == ResultCode.INVALID_CREDENTIALS)
+            return null;
+        else
+            return connection;
+    }
+
+    public boolean verifyAuthCodes() {
+        return false;
+    }
+
+    public String getAuthCode() {
+        return null;
+    }
+
 }

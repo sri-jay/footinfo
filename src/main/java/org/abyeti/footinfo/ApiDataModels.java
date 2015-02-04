@@ -60,4 +60,10 @@ public class ApiDataModels {
         public String match_id;
         public String team_id;
     }
+
+    @XmlAccessorType
+    static class AdminAuth {
+        public String username;
+        public String password;
+    }
 }

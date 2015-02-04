@@ -1,0 +1,33 @@
+body {
+	overflow: hidden;
+}
+.container {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top:30.5vh;
+}
+
+
+.semi-transparent {
+	opacity:0.7;
+}
+
+@-webkit-keyframes toBright {
+	from {
+		-webkit-filter: brightness(0.5) contrast(1.2);
+	}
+	to {
+		-webkit-filter: brightness(0.8) contrast(1.6);
+	}
+}
+
+
+#background {
+	top:-120px;
+	left:-70px;
+	width:110%;
+	position: absolute;
+	-webkit-animation: toBright 3s linear;
+	-webkit-animation-fill-mode: forwards;
+}

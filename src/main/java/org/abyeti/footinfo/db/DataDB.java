@@ -353,4 +353,53 @@ public class DataDB {
             return null;
         }
     }
+
+    public static boolean checkCodeValidity(String code) throws Exception {
+        try {
+            sf = new Configuration().configure().buildSessionFactory();
+            session = sf.openSession();
+
+            tx = session.beginTransaction();
+            final String getCurrentAuthCode = "SELECT auth_code from auth_codes WHERE ORDER BY ID DESC LIMIT 1";
+
+            Object row = session.createSQLQuery(getCurrentAuthCode).list();
+            Object[] columns = (Object[]) row;
+
+            tx.commit();
+            session.close();
+            sf.close();
+
+            if(columns[0].toString().equals(code))
+                return true;
+
+            else
+                return false;
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static String addNewAuthCode() throws  Exception {
+        try {
+            String authCode = UUID.randomUUID().toString();
+            sf = new Configuration().configure().buildSessionFactory();
+            session = sf.openSession();
+
+            tx = session.beginTransaction();
+            session.save(new AuthCodes(authCode));
+
+            tx.commit();
+            session.close();
+            sf.close();
+
+            return authCode;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return "failed";
+        }
+    }
 }

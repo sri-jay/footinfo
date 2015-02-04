@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to Aristotle</title>
+	<!-- Angular source code -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>	
+
+	<!-- Sementic UI stylesheets -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.1/semantic.min.css"/>	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.1/semantic.min.js"></script>
+
+	<!-- JQuery source, needed by Semantic -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="static/css/admin-login.css"/>
+</head>
+<body>
+<img id="background" src="static/images/landing.jpg">
+<div class="container">
+<div class="ui segment basic">
+	<form class="ui form" method="POST" ng-submit="authUser()">
+		<h1 class="ui inverted dividing header">Login</h1>
+		<div class="field">
+			<div class="ui massive icon input">
+				<input  type="text" name="username" value="Sriduth" placeholder="Sriduth" required>
+				<i class="user icon"></i>
+			</div>
+		</div>
+		<div class="field">
+			<div class="ui massive icon input">
+				<input type="text" name="password" value="pass" placeholder="pass" required>
+				<i class="lock icon"></i>
+			</div>
+		</div>
+		<button class="ui massive yellow fluid inverted button" type="submit">Log In</button>
+	</form>
+</div>
+</div>
+</body>
+<!-- Sweet Alert CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.3.3/sweet-alert.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.3.3/sweet-alert.min.css"/>
+
+<!-- Custom JS -->
+<script type="text/javascript">
+	$(document).ready(function(){
+	window.addEventListener("mousemove",function(e) {
+		var width = window.innerWidth;
+		var height = window.innerHeight;
+		var clientHeight = document.body.clientHeight;
+		var skew = {}
+		skew.y = (7 * ((e.x / width) - 0.5)) 
+		skew.x = -(7 * ((e.y / height) - 0.5));
+
+		document.getElementById("background").style.transform= 
+		"perspective("+clientHeight+"px) rotateX("+skew.x+"deg) rotateY("+skew.y+"deg)";
+	})
+});
+</script>
+</html>
