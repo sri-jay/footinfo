@@ -29,18 +29,16 @@
 		</div>
 
 		<!-- Columns in feed -->
-		<div class="ui {{matchCount}} column relaxed stackable grid">
-			<div ng-repeat="match in matches" class="column">
+		<div class="ui three columns relaxed stackable grid {{ getColumns(matchCount) }}">
+			<div ng-repeat="match in matchFeeds| filter: filterKey" class="column">
 				<div class="ui basic segment">
+					<h4 class="ui dividing header">{{match.team_a}} vs. {{match.team_b}}</h4>
 					<div class="ui feed">
-						<div class="event" ng-repeat="event in match">
+						<div class="event" ng-repeat="event in match.events">
 							<div class="label">
 								<i class="icon {{ getClass(event.event_type) }}"></i>
 							</div>
-							<div class="content">				
-								<a class="summary" href="#/matchFeed/{{ event.match_id }}">
-									{{ event.team_a}} vs {{event.team_b}}
-								</a>
+							<div class="content">	
 								<div class="ui extra text">
 									{{ event.event_text }}
 								</div>
@@ -48,7 +46,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>			
 		</div>
 
 		<div class="ui basic segment" id="feed">

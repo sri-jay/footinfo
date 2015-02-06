@@ -11,7 +11,7 @@ feedApp.factory('feedFactory', ['$http', function ($http){
 		});
 	};
 
-	factory.getMatchData = function (matchId) {
+	factory.getMatchFeed = function (matchId) {
 		return $http({
 			method: 'POST',
 			url: 'http://localhost:8080/footinfo/v1/api/getMatchFeed',
@@ -34,32 +34,32 @@ feedApp.factory('feedFactory', ['$http', function ($http){
 	return factory;
 }]);
 
-feedApp.controller('feedController', function(feedFactory, $scope, $log, $interval){
+feedApp.controller('feedController', function(feedFactory, $rootScope, $scope, $log, $interval, $timeout){
 	
-	// Holds the match feeds
 	$scope.matchFeeds = [];
-
-	function getOngoingMatches() {
-		feedFactory.getMatches().success(function (response){
-			$log.log(response);
+	function getMatches() {
+		feedFactory.getMatches().success(function (response){	
+			$log.log(response);		
+			$scope.matchCount = response.game_statuses[0].length;
+			updateMatchFeeds(response.game_statuses[0]);		
 		});
+	};
+
+
+	function updateMatchFeeds(matches) {
+		$scope.matchFeeds = [];
+		for(var i=0;i<matches.length;i++){
+			feedFactory.getMatchFeed(matches[i].match_id).success(function (response){
+				$scope.matchFeeds.push(response);
+			});
+		}
 	}
 
-	function getFeed(matchId) {		
-		var tempFeed = [];
-		feedFactory.getFeed().success(function(response) {
-			for(var i=0;i<response.length;i++) {
-				tempFeed.push(response[i]);
-				$log.log(response[i]);				
-			}
-			$scope.feed = tempFeed;
-		});				
-	}
+	getMatches();
 
-	getFeed();		
+	$interval(getMatches, 30000);
 
-
-	$scope.subscribe = function () {
+	$scope.subscribe = function () {	
 		feedFactory.addSubscriber($scope.emailId).success(function (response){
 			if(response.status == "ok") {
 				$("#userSubscription").modal('toggle');
@@ -81,4 +81,30 @@ feedApp.controller('feedController', function(feedFactory, $scope, $log, $interv
 		}
 		
 	};	
+
+	$scope.getColumns = function (count) {
+		$log.log(count);
+		return [ 
+			'one',
+			'two',
+			'three',
+			'four', 
+			'five',
+			'six',
+			'seven', 
+			'eight', 
+			'nine', 
+			'ten', 
+			'eleven', 
+			'twelve', 
+			'thirteen',
+			'fourteen',
+			'fifteen', 
+			'sixteen', 
+			'seventeen',
+			'eighteen',
+			'nineteen'
+		][count-1];
+
+	};
 });	

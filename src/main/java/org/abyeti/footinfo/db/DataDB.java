@@ -12,12 +12,12 @@ import java.sql.Blob;
 import java.util.*;
 
 public class DataDB {
-    private static SessionFactory sf;
-    private static Session session;
-    private static Transaction tx;
+    private SessionFactory sf;
+    private Session session;
+    private Transaction tx;
 
     // Add data to BD
-    public static void addFoul(String cB, String fO, String fT, String mId) throws Exception {
+    public void addFoul(String cB, String fO, String fT, String mId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -29,14 +29,14 @@ public class DataDB {
             session.close();
             sf.close();
             FootDB db = new FootDB();
-            DataDB.createEntryInLog(mId, String.format("%s fould %s at %s", db.getPlayerName(cB), db.getPlayerName(fO), Minutes.minutesBetween(new DateTime(db.getStartTime(mId)), new DateTime(fT))), "match_foul");
+            createEntryInLog(mId, String.format("%s fould %s at %s", db.getPlayerName(cB), db.getPlayerName(fO), Minutes.minutesBetween(new DateTime(db.getStartTime(mId)), new DateTime(fT))), "match_foul");
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void addGoal(String goalType, String scoredBy, String goalTime, String matchId, String teamId) throws Exception {
+    public void addGoal(String goalType, String scoredBy, String goalTime, String matchId, String teamId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -48,14 +48,14 @@ public class DataDB {
             session.close();
             sf.close();
             FootDB db = new FootDB();
-            DataDB.createEntryInLog(matchId, String.format("%s scored a %s at %s for %s.", db.getPlayerName(scoredBy), goalType, goalTime, db.getTeamName(teamId)), "player_goal");
+            createEntryInLog(matchId, String.format("%s scored a %s at %s for %s.", db.getPlayerName(scoredBy), goalType, goalTime, db.getTeamName(teamId)), "player_goal");
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void addPlayerCard(String awardedTo, String cardType, String matchId) throws Exception {
+    public void addPlayerCard(String awardedTo, String cardType, String matchId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -68,14 +68,14 @@ public class DataDB {
             session.close();
             sf.close();
             FootDB db = new FootDB();
-            DataDB.createEntryInLog(matchId, String.format("%s was awarded %s card.",db.getPlayerName(awardedTo), cardType), String.format("%s_player_card", cardType));
+            createEntryInLog(matchId, String.format("%s was awarded %s card.",db.getPlayerName(awardedTo), cardType), String.format("%s_player_card", cardType));
         }
         catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public static void addPlayer(String playerId, String dob, String country, Blob picture) throws Exception {
+    public void addPlayer(String playerId, String dob, String country, Blob picture) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -92,7 +92,7 @@ public class DataDB {
         }
     }
 
-    public static JSONArray getPlayerStats(String playerId) throws Exception {
+    public JSONArray getPlayerStats(String playerId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -204,7 +204,7 @@ public class DataDB {
         }
     }
 
-    public static void createEntryInLog(String matchId, String text, String eventType) throws Exception {
+    public void createEntryInLog(String matchId, String text, String eventType) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -223,7 +223,7 @@ public class DataDB {
         }
     }
 
-    public static Map<String, String> getGameVerdict(String matchId) throws Exception {
+    public Map<String, String> getGameVerdict(String matchId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
 
@@ -290,7 +290,7 @@ public class DataDB {
         }
     }
 
-    public static JSONArray getMatchFeed(String matchId) throws Exception {
+    public JSONObject getMatchFeed(String matchId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -298,13 +298,19 @@ public class DataDB {
             tx = session.beginTransaction();
             final String getMatchFeed = String.format("SELECT event_text, event_type FROM event_feed WHERE match_id=\'%s\' ORDER BY id DESC;", matchId);
 
-            JSONArray matchFeed = new JSONArray();
+            JSONObject matchFeed = new JSONObject();
+            FootDB db = new FootDB();
+
+            String[] participants = db.getParticipants(matchId);
+
+            matchFeed.put("team_a", db.getTeamName(participants[0]));
+            matchFeed.put("team_b", db.getTeamName(participants[1]));
 
             for(Object row : session.createSQLQuery(getMatchFeed).list()) {
                 Object[] columns = (Object[]) row;
-                matchFeed.put(
+                matchFeed.accumulate("events",
                         new JSONObject().put("event_text", columns[0].toString())
-                                        .put("event_type", columns[1].toString())
+                                .put("event_type", columns[1].toString())
                 );
             }
             tx.commit();
@@ -321,7 +327,7 @@ public class DataDB {
         }
     }
 
-    public static JSONArray getTopFeed() throws Exception {
+    public JSONArray getTopFeed() throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -360,7 +366,7 @@ public class DataDB {
         }
     }
 
-    public static boolean checkCodeValidity(String code) throws Exception {
+    public boolean checkCodeValidity(String code) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
@@ -388,7 +394,7 @@ public class DataDB {
         }
     }
 
-    public static String addNewAuthCode() throws  Exception {
+    public String addNewAuthCode() throws  Exception {
         try {
             String authCode = UUID.randomUUID().toString();
             sf = new Configuration().configure().buildSessionFactory();

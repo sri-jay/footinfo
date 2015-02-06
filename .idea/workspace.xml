@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7229d4b-a210-4daf-a02d-4e3167890e1f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/UserDB.java" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_8.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_a.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_b.cfs" afterPath="" />
@@ -77,43 +76,12 @@
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB$Relationships.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/index/lucene-store.db" afterPath="$PROJECT_DIR$/database/index/lucene-store.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/index/lucene.log.1" afterPath="$PROJECT_DIR$/database/index/lucene.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.labeltokenstore.db.id" afterPath="$PROJECT_DIR$/database/neostore.labeltokenstore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.labeltokenstore.db.names.id" afterPath="$PROJECT_DIR$/database/neostore.labeltokenstore.db.names.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.labeltokenstore.db.names" afterPath="$PROJECT_DIR$/database/neostore.labeltokenstore.db.names" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.nodestore.db.id" afterPath="$PROJECT_DIR$/database/neostore.nodestore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.nodestore.db.labels.id" afterPath="$PROJECT_DIR$/database/neostore.nodestore.db.labels.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.nodestore.db.labels" afterPath="$PROJECT_DIR$/database/neostore.nodestore.db.labels" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.nodestore.db" afterPath="$PROJECT_DIR$/database/neostore.nodestore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db.arrays.id" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db.arrays.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db.arrays" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db.arrays" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db.id" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db.index.id" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db.index.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db.index.keys.id" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db.index.keys.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db.index.keys" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db.index.keys" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db.strings.id" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db.strings.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db.strings" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db.strings" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.propertystore.db" afterPath="$PROJECT_DIR$/database/neostore.propertystore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.relationshipstore.db.id" afterPath="$PROJECT_DIR$/database/neostore.relationshipstore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.relationshipstore.db" afterPath="$PROJECT_DIR$/database/neostore.relationshipstore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.relationshiptypestore.db.id" afterPath="$PROJECT_DIR$/database/neostore.relationshiptypestore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.relationshiptypestore.db.names.id" afterPath="$PROJECT_DIR$/database/neostore.relationshiptypestore.db.names.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.relationshiptypestore.db.names" afterPath="$PROJECT_DIR$/database/neostore.relationshiptypestore.db.names" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.schemastore.db.id" afterPath="$PROJECT_DIR$/database/neostore.schemastore.db.id" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore.schemastore.db" afterPath="$PROJECT_DIR$/database/neostore.schemastore.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/neostore" afterPath="$PROJECT_DIR$/database/neostore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/nioneo_logical.log.1" afterPath="$PROJECT_DIR$/database/nioneo_logical.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/schema/label/lucene/segments.gen" afterPath="$PROJECT_DIR$/database/schema/label/lucene/segments.gen" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ApiDataModels.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/adminLogin.html" afterPath="$PROJECT_DIR$/src/main/webapp/adminLogin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/match.html" afterPath="$PROJECT_DIR$/src/main/webapp/views/match.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/scripts/feed/controllers.js" afterPath="$PROJECT_DIR$/src/main/webapp/static/scripts/feed/controllers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/feed.html" afterPath="$PROJECT_DIR$/src/main/webapp/feed.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="footinfo.iws" />
@@ -158,47 +126,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientApi.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.18333334" vertical-offset="1435" max-vertical-offset="2016">
-              <caret line="276" column="0" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="3024">
+              <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
                 <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
                 <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
                 <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
                 <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
                 <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
                 <element signature="method#getGameData#0;class#ClientApi#0" expanded="false" />
-                <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-                <element signature="method#playerCard#0;class#ClientApi#0" expanded="false" />
-                <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
-                <element signature="method#getPlayerStats#0;class#ClientApi#0" expanded="false" />
-                <element signature="method#testEndpoint#0;class#ClientApi#0" expanded="false" />
-                <element signature="method#getTopFeed#0;class#ClientApi#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataDB.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DataDB.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1582">
-              <caret line="306" column="49" selection-start-line="306" selection-start-column="49" selection-end-line="306" selection-end-column="49" />
+            <state vertical-scroll-proportion="2.66747" vertical-offset="1427" max-vertical-offset="3500">
+              <caret line="291" column="0" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#addFoul#0;class#DataDB#0" expanded="false" />
-                <element signature="method#addGoal#0;class#DataDB#0" expanded="false" />
-                <element signature="method#addPlayerCard#0;class#DataDB#0" expanded="false" />
-                <element signature="method#addPlayer#0;class#DataDB#0" expanded="false" />
                 <element signature="method#getPlayerStats#0;class#DataDB#0" expanded="false" />
-                <element signature="method#createEntryInLog#0;class#DataDB#0" expanded="false" />
-                <element signature="method#getGameVerdict#0;class#DataDB#0" expanded="false" />
+                <element signature="method#getTopFeed#0;class#DataDB#0" expanded="false" />
                 <element signature="method#checkCodeValidity#0;class#DataDB#0" expanded="false" />
-                <element signature="method#addNewAuthCode#0;class#DataDB#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FootDB.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="593" max-vertical-offset="2422">
+              <caret line="330" column="51" selection-start-line="330" selection-start-column="51" selection-end-line="330" selection-end-column="51" />
+              <folding>
+                <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
+                <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
+                <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
+                <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
+                <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
+                <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
+                <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
+                <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getGameData#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getParticipants#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getPlayerName#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getTeamName#0;class#FootDB#0" expanded="false" />
+                <element signature="method#getStartTime#0;class#FootDB#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -215,35 +197,6 @@
                 <element signature="method#verifyAuthCodes#0;class#UserDB#0" expanded="false" />
                 <element signature="method#getAuthCode#0;class#UserDB#0" expanded="false" />
                 <element signature="method#addSubscriber#0;class#UserDB#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FootDB.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="826">
-              <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-              <folding>
-                <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
-                <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
-                <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
-                <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
-                <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
-                <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
-                <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
-                <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
-                <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
-                <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getGameData#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getParticipants#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getPlayerName#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getTeamName#0;class#FootDB#0" expanded="false" />
-                <element signature="method#getStartTime#0;class#FootDB#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -297,7 +250,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/hibernate-mappings/MatchGoal.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate-mappings/EventFeed.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/EventFeed.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate-mappings/AuthCodes.hbm.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/ObjectMappings/AuthCodes.java" />
@@ -306,6 +258,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/UserDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java" />
       </list>
     </option>
   </component>
@@ -809,10 +762,11 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20196672" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3581662" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18609625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34670487" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18481375" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09152799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -823,7 +777,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -905,19 +858,12 @@
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getGameData#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerCard#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getPlayerStats#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#testEndpoint#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getTopFeed#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -935,11 +881,9 @@
             <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
             <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
-            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
             <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
             <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
-            <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameData#0;class#FootDB#0" expanded="false" />
             <element signature="method#getParticipants#0;class#FootDB#0" expanded="false" />
             <element signature="method#getPlayerName#0;class#FootDB#0" expanded="false" />
@@ -993,19 +937,12 @@
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getGameData#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerCard#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getPlayerStats#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#testEndpoint#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getTopFeed#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1023,11 +960,9 @@
             <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
             <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
-            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
             <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
             <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
-            <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameData#0;class#FootDB#0" expanded="false" />
             <element signature="method#getParticipants#0;class#FootDB#0" expanded="false" />
             <element signature="method#getPlayerName#0;class#FootDB#0" expanded="false" />
@@ -1074,19 +1009,12 @@
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getGameData#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerCard#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getPlayerStats#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#testEndpoint#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getTopFeed#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1104,11 +1032,9 @@
             <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
             <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
             <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
-            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
             <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
             <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
-            <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
             <element signature="method#getGameData#0;class#FootDB#0" expanded="false" />
             <element signature="method#getParticipants#0;class#FootDB#0" expanded="false" />
             <element signature="method#getPlayerName#0;class#FootDB#0" expanded="false" />
@@ -1145,19 +1071,12 @@
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getGameData#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerCard#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getPlayerStats#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#testEndpoint#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getTopFeed#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1182,19 +1101,12 @@
           <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getGameData#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerCard#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getPlayerStats#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#testEndpoint#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getTopFeed#0;class#ClientApi#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1389,33 +1301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="94" max-vertical-offset="826">
-          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
-          <folding>
-            <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
-            <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
-            <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
-            <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
-            <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
-            <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
-            <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
-            <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
-            <element signature="method#createGame#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
-            <element signature="method#stopGame#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getGameData#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getParticipants#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getPlayerName#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getTeamName#0;class#FootDB#0" expanded="false" />
-            <element signature="method#getStartTime#0;class#FootDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1332" max-vertical-offset="2002">
@@ -1446,44 +1331,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1582">
-          <caret line="306" column="49" selection-start-line="306" selection-start-column="49" selection-end-line="306" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addFoul#0;class#DataDB#0" expanded="false" />
-            <element signature="method#addGoal#0;class#DataDB#0" expanded="false" />
-            <element signature="method#addPlayerCard#0;class#DataDB#0" expanded="false" />
-            <element signature="method#addPlayer#0;class#DataDB#0" expanded="false" />
-            <element signature="method#getPlayerStats#0;class#DataDB#0" expanded="false" />
-            <element signature="method#createEntryInLog#0;class#DataDB#0" expanded="false" />
-            <element signature="method#getGameVerdict#0;class#DataDB#0" expanded="false" />
-            <element signature="method#checkCodeValidity#0;class#DataDB#0" expanded="false" />
-            <element signature="method#addNewAuthCode#0;class#DataDB#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18333334" vertical-offset="1435" max-vertical-offset="2016">
-          <caret line="276" column="0" selection-start-line="276" selection-start-column="0" selection-end-line="276" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="3024">
+          <caret line="40" column="24" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#addTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#createGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getAllGameStatus#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getTeam#0;class#ClientApi#0" expanded="false" />
             <element signature="method#stopGame#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getPlayerData#0;class#ClientApi#0" expanded="false" />
             <element signature="method#getGameData#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerFoul#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#playerCard#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#matchGoal#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getPlayerStats#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#testEndpoint#0;class#ClientApi#0" expanded="false" />
-            <element signature="method#getTopFeed#0;class#ClientApi#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/FootDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="593" max-vertical-offset="2422">
+          <caret line="330" column="51" selection-start-line="330" selection-start-column="51" selection-end-line="330" selection-end-column="51" />
+          <folding>
+            <element signature="class#NodeLabels#0;class#FootDB#0" expanded="false" />
+            <element signature="method#FootDB#0;class#FootDB#0" expanded="false" />
+            <element signature="method#createNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addPropertyToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#generateJSONRelationship#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addLabelToNode#0;class#FootDB#0" expanded="false" />
+            <element signature="method#addTeam#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getGameStatuses#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getAllClubs#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getGameData#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getParticipants#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getPlayerName#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getTeamName#0;class#FootDB#0" expanded="false" />
+            <element signature="method#getStartTime#0;class#FootDB#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.66747" vertical-offset="1427" max-vertical-offset="3500">
+          <caret line="291" column="0" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getPlayerStats#0;class#DataDB#0" expanded="false" />
+            <element signature="method#getTopFeed#0;class#DataDB#0" expanded="false" />
+            <element signature="method#checkCodeValidity#0;class#DataDB#0" expanded="false" />
           </folding>
         </state>
       </provider>

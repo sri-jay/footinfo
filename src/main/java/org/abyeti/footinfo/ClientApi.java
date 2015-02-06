@@ -174,7 +174,7 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response playerFoul(ApiDataModels.PlayerFoul foul) {
         try {
-            DataDB.addFoul(foul.commited_by, foul.foul_on, new DateTime().toString(), foul.match_id);
+            new DataDB().addFoul(foul.commited_by, foul.foul_on, new DateTime().toString(), foul.match_id);
             return Response.status(200).entity("{\"status\" : \"succeeded\"}").build();
         }
         catch (Exception e){
@@ -189,7 +189,7 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response playerCard(ApiDataModels.PlayerCard card) {
         try {
-            DataDB.addPlayerCard(card.awarded_to, card.card_type, card.match_id);
+            new DataDB().addPlayerCard(card.awarded_to, card.card_type, card.match_id);
             return Response.status(200).entity("{\"status\" : \"succeeded\"}").build();
         }
         catch (Exception e) {
@@ -204,7 +204,7 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response matchGoal(ApiDataModels.MatchGoal goal) {
         try {
-            DataDB.addGoal(goal.goal_type, goal.scored_by, new DateTime().toString(), goal.match_id, goal.team_id);
+            new DataDB().addGoal(goal.goal_type, goal.scored_by, new DateTime().toString(), goal.match_id, goal.team_id);
             return Response.status(200).entity("{\"status\" : \"succeeded\"}").build();
         }
         catch (Exception e){
@@ -218,7 +218,7 @@ public class ClientApi {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response getPlayerStats(ApiDataModels.PlayerData playerData) {
         try {
-            JSONArray stats = DataDB.getPlayerStats(playerData.player_id);
+            JSONArray stats = new DataDB().getPlayerStats(playerData.player_id);
             return Response
                     .status(200)
                     .entity(stats.toString())
@@ -236,7 +236,7 @@ public class ClientApi {
         try {
             FootDB db = new FootDB();
             System.out.println(db.getStartTime("7d67eeee-9a63-4356-b2af-5921fdd5698f"));
-            DataDB.getTopFeed();
+            new DataDB().getTopFeed();
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -266,7 +266,7 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getTopFeed() {
         try {
-            return Response.status(200).entity(DataDB.getTopFeed().toString()).build();
+            return Response.status(200).entity(new DataDB().getTopFeed().toString()).build();
         }
 
         catch (Exception e) {
@@ -280,7 +280,7 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getMatchFeed(ApiDataModels.GameData game) {
         try {
-            return Response.status(200).entity(DataDB.getMatchFeed(game.match_id).toString()).build();
+            return Response.status(200).entity(new DataDB().getMatchFeed(game.match_id).toString()).build();
         }
 
         catch (Exception e) {

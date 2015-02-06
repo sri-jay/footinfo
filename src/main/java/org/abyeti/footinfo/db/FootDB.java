@@ -214,7 +214,7 @@ public class FootDB {
                             .toString()
             );
 
-            DataDB.createEntryInLog(matchId,String.format("%s vs %s has started at %s", tA, tB, startTime), "match_start");
+            new DataDB().createEntryInLog(matchId, String.format("%s vs %s has started at %s", tA, tB, startTime), "match_start");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -339,10 +339,12 @@ public class FootDB {
                 .entity("[\"finished\"]")
                 .put(ClientResponse.class);
 
-        Map<String, String> verdict = DataDB.getGameVerdict(matchId);
+        DataDB db = new DataDB();
+
+        Map<String, String> verdict = db.getGameVerdict(matchId);
 
         if(verdict.containsKey("win")){
-            DataDB.createEntryInLog(matchId,
+            db.createEntryInLog(matchId,
                 String.format("%s vs %s : %s wins by %d goals.",
                     verdict.get("win"),
                     verdict.get("loss"),
@@ -354,7 +356,7 @@ public class FootDB {
         }
 
         else if(verdict.containsKey("tie")) {
-            DataDB.createEntryInLog(matchId, String.format("%s vs %s has ended in a tie! %s - %s", verdict.get("team_b"), verdict.get("team_a"),verdict.get("tie"), verdict.get("tie")), "match_finish");
+            db.createEntryInLog(matchId, String.format("%s vs %s has ended in a tie! %s - %s", verdict.get("team_b"), verdict.get("team_a"),verdict.get("tie"), verdict.get("tie")), "match_finish");
         }
 
     if(response.getStatus() == 204 && verdict.containsKey("status")){
