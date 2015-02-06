@@ -15,7 +15,9 @@ org\abyeti\footinfo\db\ObjectMappings\PenaltyCard.class
 org\abyeti\footinfo\db\FootDB$NodeLabels.class
 org\abyeti\footinfo\db\ObjectMappings\PlayerData.class
 org\abyeti\footinfo\ApiDataModels$MatchGoal.class
+org\abyeti\footinfo\ApiDataModels$Subscriber.class
 org\abyeti\footinfo\db\ObjectMappings\MatchFoul.class
+org\abyeti\footinfo\db\UserDB.class
 org\abyeti\footinfo\ApiDataModels$GetTeam.class
 org\abyeti\footinfo\ApiDataModels.class
 org\abyeti\footinfo\ApiDataModels$FinishGameModel.class

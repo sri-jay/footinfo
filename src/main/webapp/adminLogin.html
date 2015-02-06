@@ -3,10 +3,8 @@
 <html>
 <head>
 	<title>Welcome to Aristotle</title>
-	<!-- Angular source code -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>	
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>	
 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>	
 	<!-- Sementic UI stylesheets -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.1/semantic.min.css"/>	
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.6.1/semantic.min.js"></script>
@@ -15,23 +13,23 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 	<!-- Custom Styles -->
-	<link rel="stylesheet" href="static/css/admin-login.css"/>
+	<link rel="stylesheet" href="static/css/admin/admin-login.css"/>
 </head>
-<body>
+<body ng-app="landingApp">
 <img id="background" src="static/images/landing.jpg">
 <div class="container">
 <div class="ui segment basic">
-	<form class="ui form" method="POST" ng-submit="authUser()">
+	<form class="ui form" method="POST" ng-submit="authAdmin()" ng-controller="formController">
 		<h1 class="ui inverted dividing header">Login</h1>
 		<div class="field">
 			<div class="ui massive icon input">
-				<input  type="text" name="username" value="Sriduth" placeholder="Sriduth" required>
+				<input  type="text" id="username" name="username" value="admin" placeholder="admin" required>
 				<i class="user icon"></i>
 			</div>
 		</div>
 		<div class="field">
 			<div class="ui massive icon input">
-				<input type="text" name="password" value="pass" placeholder="pass" required>
+				<input type="text" id="password" name="password" value="admin" placeholder="admin" required>
 				<i class="lock icon"></i>
 			</div>
 		</div>
@@ -46,18 +44,37 @@
 
 <!-- Custom JS -->
 <script type="text/javascript">
-	$(document).ready(function(){
-	window.addEventListener("mousemove",function(e) {
-		var width = window.innerWidth;
-		var height = window.innerHeight;
-		var clientHeight = document.body.clientHeight;
-		var skew = {}
-		skew.y = (7 * ((e.x / width) - 0.5)) 
-		skew.x = -(7 * ((e.y / height) - 0.5));
+window.addEventListener("mousemove",function(e) {
+	var width = window.innerWidth;
+	var height = window.innerHeight;
+	var clientHeight = document.body.clientHeight;
+	var skew = {}
+	skew.y = (7 * ((e.x / width) - 0.5)) 
+	skew.x = -(7 * ((e.y / height) - 0.5));
 
-		document.getElementById("background").style.transform= 
-		"perspective("+clientHeight+"px) rotateX("+skew.x+"deg) rotateY("+skew.y+"deg)";
-	})
+	document.getElementById("background").style.transform= 
+	"perspective("+clientHeight+"px) rotateX("+skew.x+"deg) rotateY("+skew.y+"deg)";
+});
+
+var landingApp = angular.module('landingApp', []);
+
+landingApp.controller("formController", function ($scope, $http){
+
+	$scope.authAdmin = function() {
+		var authinfo = {
+			username: $("#username").val(),
+			password: $("#password").val()
+		};
+
+		$http({
+			method: 'POST',
+			url: 'http://localhost:8080/footinfo/v1/api/authAdmin', 
+			data: authinfo
+		}).success(function(response){
+			if(response.status == "ok")
+				window.location.href = "http://localhost:8080/footinfo";
+		});	
+	};		
 });
 </script>
 </html>

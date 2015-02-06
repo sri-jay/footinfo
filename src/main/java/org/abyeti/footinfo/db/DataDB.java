@@ -11,9 +11,6 @@ import org.json.JSONObject;
 import java.sql.Blob;
 import java.util.*;
 
-/**
- * Created by Work on 1/25/2015.
- */
 public class DataDB {
     private static SessionFactory sf;
     private static Session session;
@@ -32,7 +29,7 @@ public class DataDB {
             session.close();
             sf.close();
             FootDB db = new FootDB();
-            DataDB.createEntryInLog(mId, String.format("%s fould %s at %s", db.getPlayerName(cB), db.getPlayerName(fO), Minutes.minutesBetween(new DateTime(), new DateTime(fT))), "match_foul");
+            DataDB.createEntryInLog(mId, String.format("%s fould %s at %s", db.getPlayerName(cB), db.getPlayerName(fO), Minutes.minutesBetween(new DateTime(db.getStartTime(mId)), new DateTime(fT))), "match_foul");
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -71,7 +68,7 @@ public class DataDB {
             session.close();
             sf.close();
             FootDB db = new FootDB();
-            DataDB.createEntryInLog(matchId, String.format("%s was awarded %s card.",db.getPlayerName(awardedTo), cardType), "player_card");
+            DataDB.createEntryInLog(matchId, String.format("%s was awarded %s card.",db.getPlayerName(awardedTo), cardType), String.format("%s_player_card", cardType));
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -218,6 +215,8 @@ public class DataDB {
 
             session.close();
             sf.close();
+            String[] participants = new FootDB().getParticipants(matchId);
+            UserDB.notifySubscribers(String.format("%s vs %s", participants[0], participants[1]), text);
         }
         catch (Exception e){
             e.printStackTrace();
@@ -328,16 +327,23 @@ public class DataDB {
             session = sf.openSession();
 
             tx = session.beginTransaction();
-            final String getMatchFeed = String.format("SELECT event_text, event_type, match_id FROM event_feed WHERE ORDER BY id DESC LIMIT 6;");
+            final String getMatchFeed = String.format("SELECT event_text, event_type, match_id FROM event_feed ORDER BY id DESC;");
 
             JSONArray matchFeed = new JSONArray();
 
+            FootDB db = new FootDB();
+
             for(Object row : session.createSQLQuery(getMatchFeed).list()) {
                 Object[] columns = (Object[]) row;
+                String[] participants = db.getParticipants(columns[2].toString());
+                String team_a = db.getTeamName(participants[0]);
+                String team_b = db.getTeamName(participants[1]);
                 matchFeed.put(
                         new JSONObject().put("event_text", columns[0].toString())
                                 .put("event_type", columns[1].toString())
                                 .put("match_id", columns[2].toString())
+                                .put("team_a", team_a)
+                                .put("team_b", team_b)
                 );
             }
             tx.commit();

@@ -66,4 +66,9 @@ public class ApiDataModels {
         public String username;
         public String password;
     }
+
+    @XmlAccessorType
+    static class Subscriber {
+        public String email_id;
+    }
 }

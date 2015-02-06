@@ -3,6 +3,7 @@ package org.abyeti.footinfo;
 import com.unboundid.ldap.sdk.*;
 import org.abyeti.footinfo.db.DataDB;
 import org.abyeti.footinfo.db.FootDB;
+import org.abyeti.footinfo.db.UserDB;
 import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -11,17 +12,9 @@ import javax.net.SocketFactory;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.UUID;
 
 @Path("/api")
 public class ClientApi {
-
-    private final String defaultParentDn = "dc=example,dc=com";
-    private final String loginDn = "uid=admin,ou=system";
-    private final String password = "secret";
-    private final int ldapPort = 10389;
-    private final String ldapDomain = "localhost";
-    private SocketFactory sfact = null;
 
     @POST
     @Path("/addTeam")
@@ -252,10 +245,13 @@ public class ClientApi {
 
     @POST
     @Path("/authAdmin")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
     public Response authAdmin(ApiDataModels.AdminAuth cred) {
         try {
-            if(authUser(cred.password, cred.username, "footInfoAdmins")) {
-                return Response.status(200).entity(String.format("{\"status\" : \"ok\", \"auth_code\" : \"%s\"}", getAuthCode())).build();
+
+            if(UserDB.authUser(cred.password, cred.username, "footInfoAdmins")) {
+                return Response.status(200).entity(String.format("{\"status\" : \"ok\", \"auth_code\" : \"%s\"}", UserDB.getAuthCode())).build();
             }
             return Response.status(200).entity("{\"status\" : \"not_authenticated\", \"auth_code\" : \"%s\"}").build();
         }
@@ -265,54 +261,46 @@ public class ClientApi {
         }
     }
 
-    public boolean authUser(String password, String uid, String orgName) {
+    @GET
+    @Path("/getTopFeed")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getTopFeed() {
         try {
-            LDAPConnection connection = getConnection();
-            final String orgDn = String.format("o=%s,dc=example,dc=com", orgName);
-            System.out.println(orgDn);
+            return Response.status(200).entity(DataDB.getTopFeed().toString()).build();
+        }
 
+        catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(500).entity("{\"status\" : \"fuq u\"}").build();
+        }
+    }
 
-            SearchResult res = connection.search(new SearchRequest(
-                    orgDn, SearchScope.SUB, Filter.createEqualityFilter("userPassword", password)
-            ));
+    @POST
+    @Path("/getMatchFeed")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getMatchFeed(ApiDataModels.GameData game) {
+        try {
+            return Response.status(200).entity(DataDB.getMatchFeed(game.match_id).toString()).build();
+        }
 
-            for(SearchResultEntry ent : res.getSearchEntries()){
-                System.out.println(ent.toString());
-            }
-            System.out.println(res.getEntryCount());
+        catch (Exception e) {
+            e.printStackTrace();
+            return Response.status(500).entity("{\"status\" : \"fuq u\"}").build();
+        }
+    }
 
-            if(res.getEntryCount() == 1)
-                return true;
-            else
-                return false;
+    @POST
+    @Path("/addSubscriber")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response subscribeEmail(ApiDataModels.Subscriber sub) {
+        try {
+            UserDB.addSubscriber(sub.email_id);
+            return Response.status(200).entity("{\"status\" : \"ok\"}").build();
         }
         catch (Exception e) {
             e.printStackTrace();
-            return false;
+            return Response.status(200).entity("{\"status\" : \"failed\"}").build();
         }
     }
-
-    public LDAPConnection getConnection()  throws Exception {
-        if(sfact == null) {
-            sfact = SocketFactory.getDefault();
-            System.out.println("Creating socket factory!");
-        }
-
-        LDAPConnection connection = new LDAPConnection(sfact, ldapDomain, ldapPort);
-        BindResult result = connection.bind(new SimpleBindRequest(loginDn, password));
-
-        if(result.getResultCode() == ResultCode.INVALID_CREDENTIALS)
-            return null;
-        else
-            return connection;
-    }
-
-    public boolean verifyAuthCodes() {
-        return false;
-    }
-
-    public String getAuthCode() {
-        return null;
-    }
-
 }

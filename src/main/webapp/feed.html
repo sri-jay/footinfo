@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Footinfo</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.7.3/semantic.min.css"/>    
+
+    <!--jQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!--Semantic UI -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.7.3/semantic.min.js"></script>
+	<!-- Sweet Alert -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.3.3/sweet-alert.min.css"/>
+
+	<link rel="stylesheet"  href="static/css/feed/styles.css"/>
+</head>
+<body  ng-app="feedApp" ng-controller="feedController">
+<div class="container">
+	<div class="ui basic segment" id="search">
+		<div class="ui segment">
+			<h3 class="ui orange dividing header">Search</h3>
+			<div class="ui basic massive fluid action input">
+				<input ng-model="filterKey" placeholder="Search"/>
+				   	<div class="ui inverted blue right labeled icon button" id="subscribe">
+				   		<i class="inverted mail icon"></i>
+	    				Subscibe ? 
+	  				</div>
+			</div>
+		</div>
+
+		<!-- Columns in feed -->
+		<div class="ui {{matchCount}} column relaxed stackable grid">
+			<div ng-repeat="match in matches" class="column">
+				<div class="ui basic segment">
+					<div class="ui feed">
+						<div class="event" ng-repeat="event in match">
+							<div class="label">
+								<i class="icon {{ getClass(event.event_type) }}"></i>
+							</div>
+							<div class="content">				
+								<a class="summary" href="#/matchFeed/{{ event.match_id }}">
+									{{ event.team_a}} vs {{event.team_b}}
+								</a>
+								<div class="ui extra text">
+									{{ event.event_text }}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui basic segment" id="feed">
+			<div class="ui feed">
+				<div class="event" ng-repeat="event in feed| filter:filterKey">
+					<div class="label">
+						<i class="icon {{ getClass(event.event_type) }}"></i>
+					</div>
+					<div class="content">				
+						<a class="summary" href="#/matchFeed/{{ event.match_id }}">
+							{{ event.team_a}} vs {{event.team_b}}
+						</a>
+						<div class="ui extra text">
+							{{ event.event_text }}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-route.min.js"></script>	
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular-animate.min.js"></script>
+<script type="text/javascript" src="static/scripts/feed/controllers.js"></script>
+<script type="text/javascript" src="static/scripts/feed/feed.js"></script>
+</html>
+
+
+
+<div class="ui basic modal" id="userSubscription">
+  <i class="close icon"></i>
+  <div class="header">
+    Tell us your email id?
+  </div>
+  <div class="content">
+    <div class="description">
+    	<form class="ui form" ng-submit="subscribe()">
+    		<div class="field">
+    			<div class="ui basic fluid input">
+    				<input required type="text" placeholder="jon@doe.com" ng-model="emailId" />
+    			</div>
+    		</div>
+			<div class="two fluid ui inverted buttons">
+				<div class="ui orange basic inverted button">
+					<i class="remove icon"></i>
+					Naah, maybe later.
+				</div>
+				<button  type="submit" class="ui green basic inverted button">
+					<i class="checkmark icon"></i>
+					Subscribe?
+				</button>
+			</div>
+    	</form>
+    </div>
+  </div>
+</div>
