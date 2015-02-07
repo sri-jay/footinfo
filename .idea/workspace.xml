@@ -2,60 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7229d4b-a210-4daf-a02d-4e3167890e1f" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\active_tx_log" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene-store.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.active" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.v0" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.v1" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\index\lucene.log.v2" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neo4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.labeltokenstore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.labeltokenstore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.labeltokenstore.db.names" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.labeltokenstore.db.names.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.nodestore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.nodestore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.nodestore.db.labels" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.nodestore.db.labels.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.arrays" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.arrays.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.index" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.index.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.index.keys" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.index.keys.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.strings" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.propertystore.db.strings.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshipgroupstore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshipgroupstore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshipstore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshipstore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshiptypestore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshiptypestore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshiptypestore.db.names" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.relationshiptypestore.db.names.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.schemastore.db" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\neostore.schemastore.db.id" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.active" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.v0" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.v1" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\nioneo_logical.log.v2" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\rrd" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_8.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_a.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\_b.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\segments_2" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\index\lucene\1\write.lock" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\_b.cfs" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\_p.cfs" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\segments.gen" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\segments_1" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\schema\label\lucene\segments_2" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\store_lock" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\database\tm_tx_log.1" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\java\org\abyeti\footinfo\db\ObjectMappings\sample.java" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\webapp\images\img1.gif" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\webapp\images\img2.gif" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\src\main\webapp\images\img3.gif" afterPath="" />
@@ -122,19 +77,6 @@
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB$Labels.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB$Relationships.class" afterPath="" />
       <change type="DELETED" beforePath="C:\Users\Work\IdeaProjects\footinfo\target\classes\org\abyeti\footinfo\FootDB.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" afterPath="$PROJECT_DIR$/target/classes/org/abyeti/footinfo/ClientApi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/jersey.war" afterPath="$PROJECT_DIR$/target/jersey.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/index/lucene.log.1" afterPath="$PROJECT_DIR$/database/index/lucene.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/nioneo_logical.log.1" afterPath="$PROJECT_DIR$/database/nioneo_logical.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" afterPath="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_server_2_10_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_server_2_10_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/static/css/admin/admin-login.css" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/admin/admin-login.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footinfo.iml" afterPath="$PROJECT_DIR$/footinfo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="footinfo.iws" />
@@ -183,16 +125,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserDB.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserDB.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/UserDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6603774" vertical-offset="819" max-vertical-offset="1190">
+            <state vertical-scroll-proportion="0.0" vertical-offset="533" max-vertical-offset="1190">
               <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
               <folding>
                 <element signature="method#authUser#0;class#UserDB#0" expanded="false" />
                 <element signature="method#verifyAuthCodes#0;class#UserDB#0" expanded="false" />
                 <element signature="method#getAuthCode#0;class#UserDB#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schema.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.93791574" vertical-offset="25" max-vertical-offset="546">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -321,6 +273,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/DataDB.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/ClientApi.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
       </list>
     </option>
   </component>
@@ -435,260 +388,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="feed" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="hibernate-mappings" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="footinfo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="db" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ObjectMappings" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -955,8 +654,8 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20499243" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40974212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29581994" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40974212" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29512894" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26928896" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1482,13 +1181,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/abyeti/footinfo/db/UserDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6603774" vertical-offset="819" max-vertical-offset="1190">
+        <state vertical-scroll-proportion="0.0" vertical-offset="533" max-vertical-offset="1190">
           <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
           <folding>
             <element signature="method#authUser#0;class#UserDB#0" expanded="false" />
             <element signature="method#verifyAuthCodes#0;class#UserDB#0" expanded="false" />
             <element signature="method#getAuthCode#0;class#UserDB#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.93791574" vertical-offset="25" max-vertical-offset="546">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
