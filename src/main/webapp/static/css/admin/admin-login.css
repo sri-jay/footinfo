@@ -25,7 +25,7 @@ body {
 
 #background {
 	top:-120px;
-	left:-100px;
+	left:-90px;
 	width:110%;
 	position: absolute;
 	-webkit-animation: toBright 3s linear;

@@ -3,21 +3,22 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.dialect">
+            <!--Seems to work-->
             org.hibernate.dialect.MySQLDialect
         </property>
         <property name="hibernate.connection.driver_class">
-            com.mysql.jdbc.Driver
+            com.vertica.jdbc.Driver
         </property>
 
         <!-- DB config for hibernate to connect -->
         <property name="hibernate.connection.url">
-            jdbc:mysql://localhost:3306/footinfo
+            jdbc::vertica://192.168.111.114:5433/footinfo
         </property>
         <property name="hibernate.connection.username">
-            root
+            dbadmin
         </property>
         <property name="hibernate.connection.password">
-            root
+            footinfo
         </property>
 
         <mapping resource="hibernate-mappings/MatchFoul.hbm.xml"/>

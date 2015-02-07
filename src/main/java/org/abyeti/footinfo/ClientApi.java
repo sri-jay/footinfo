@@ -1,6 +1,5 @@
 package org.abyeti.footinfo;
 
-import com.unboundid.ldap.sdk.*;
 import org.abyeti.footinfo.db.DataDB;
 import org.abyeti.footinfo.db.FootDB;
 import org.abyeti.footinfo.db.UserDB;
@@ -8,7 +7,6 @@ import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import javax.net.SocketFactory;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -227,19 +225,6 @@ public class ClientApi {
         catch (Exception e){
             e.printStackTrace();
             return Response.status(500).entity("{\"status\" : \"failed\"}").build();
-        }
-    }
-
-    @POST
-    @Path("/test")
-    public void testEndpoint() {
-        try {
-            FootDB db = new FootDB();
-            System.out.println(db.getStartTime("7d67eeee-9a63-4356-b2af-5921fdd5698f"));
-            new DataDB().getTopFeed();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
         }
     }
 

@@ -109,6 +109,11 @@
             <version>2.3.8</version>
         </dependency>
 
+        <dependency>
+            <groupId>123456</groupId>
+            <artifactId>vertica</artifactId>
+            <version>7.11</version>
+        </dependency>
     </dependencies>
 
 
