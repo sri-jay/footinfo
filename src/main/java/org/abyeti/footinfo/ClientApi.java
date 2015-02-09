@@ -7,9 +7,11 @@ import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import javax.print.attribute.standard.MediaPrintableArea;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.xml.crypto.Data;
 
 @Path("/api")
 public class ClientApi {
@@ -172,7 +174,7 @@ public class ClientApi {
     @Produces(MediaType.APPLICATION_JSON)
     public Response playerFoul(ApiDataModels.PlayerFoul foul) {
         try {
-            new DataDB().addFoul(foul.commited_by, foul.foul_on, new DateTime().toString(), foul.match_id);
+            new DataDB().addFoul(foul.committed_by, foul.foul_on, new DateTime().toString(), foul.match_id);
             return Response.status(200).entity("{\"status\" : \"succeeded\"}").build();
         }
         catch (Exception e){
@@ -286,6 +288,32 @@ public class ClientApi {
         catch (Exception e) {
             e.printStackTrace();
             return Response.status(200).entity("{\"status\" : \"failed\"}").build();
+        }
+    }
+
+    @POST
+    @Path("/archiveMatch")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public void deleteMatch(ApiDataModels.GameData gameData) {
+        try {
+            DataDB db = new DataDB();
+            db.archiveMatch(gameData.match_id);
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @POST
+    @Path("/deleteArchives")
+    public void deleteArchives() {
+        try {
+            new DataDB().reapArchivedData();
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

@@ -21,6 +21,10 @@
             footinfo
         </property>
 
+        <property name="hibernate.current_session_context_class">
+            thread
+        </property>
+
         <mapping resource="hibernate-mappings/MatchFoul.hbm.xml"/>
         <mapping resource="hibernate-mappings/MatchGoal.hbm.xml"/>
         <mapping resource="hibernate-mappings/PenaltyCard.hbm.xml"/>

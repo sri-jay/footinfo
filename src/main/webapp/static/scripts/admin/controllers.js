@@ -93,7 +93,7 @@ footinfo.factory("apiFactory",['$http', function($http){
             method: 'POST',
             url: 'http://localhost:8080/footinfo/v1/api/playerFoul',
             data: {
-                'commited_by' : commitedBy,
+                'committed_by' : commitedBy,
                 'foul_on' : foulOn,
                 'match_id': gameId
             }

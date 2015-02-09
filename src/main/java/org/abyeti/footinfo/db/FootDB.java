@@ -465,4 +465,5 @@ public class FootDB {
         JSONArray row  = new JSONObject(responseData).getJSONArray("results").getJSONObject(0).getJSONArray("data").getJSONObject(0).getJSONArray("row");
         return row.getJSONArray(0).getString(0);
     }
+
 }

@@ -41,7 +41,7 @@ public class ApiDataModels {
 
     @XmlAccessorType
     static class PlayerFoul {
-        public String commited_by;
+        public String committed_by;
         public String foul_on;
         public String match_id;
     }

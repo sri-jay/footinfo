@@ -21,12 +21,12 @@ public class DataDB {
         try {
             sf = new Configuration().configure().buildSessionFactory();
             session = sf.openSession();
+
             tx = session.beginTransaction();
 
             session.save(new MatchFoul(cB, fO, fT, mId));
 
             tx.commit();
-            session.close();
             sf.close();
             FootDB db = new FootDB();
             createEntryInLog(mId, String.format("%s fould %s at %s", db.getPlayerName(cB), db.getPlayerName(fO), Minutes.minutesBetween(new DateTime(db.getStartTime(mId)), new DateTime(fT))), "match_foul");
@@ -39,14 +39,16 @@ public class DataDB {
     public void addGoal(String goalType, String scoredBy, String goalTime, String matchId, String teamId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
+            //session = sf.getCurrentSession();
+
             session = sf.openSession();
 
             tx = session.beginTransaction();
             session.save(new MatchGoal(goalType, scoredBy, goalTime, matchId, teamId));
             tx.commit();
 
-            session.close();
             sf.close();
+
             FootDB db = new FootDB();
             createEntryInLog(matchId, String.format("%s scored a %s at %s for %s.", db.getPlayerName(scoredBy), goalType, goalTime, db.getTeamName(teamId)), "player_goal");
         }
@@ -58,6 +60,7 @@ public class DataDB {
     public void addPlayerCard(String awardedTo, String cardType, String matchId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
+            //session = sf.getCurrentSession();
             session = sf.openSession();
 
             tx = session.beginTransaction();
@@ -65,8 +68,8 @@ public class DataDB {
             session.save(new PenaltyCard(awardedTo, cardType, matchId));
             tx.commit();
 
-            session.close();
             sf.close();
+
             FootDB db = new FootDB();
             createEntryInLog(matchId, String.format("%s was awarded %s card.",db.getPlayerName(awardedTo), cardType), String.format("%s_player_card", cardType));
         }
@@ -78,13 +81,14 @@ public class DataDB {
     public void addPlayer(String playerId, String dob, String country, Blob picture) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
+            //session = sf.getCurrentSession();
+
             session = sf.openSession();
 
             tx = session.beginTransaction();
             session.save(new PlayerData(playerId, dob, country, picture));
             tx.commit();
 
-            session.close();
             sf.close();
         }
         catch (Exception e) {
@@ -95,6 +99,8 @@ public class DataDB {
     public JSONArray getPlayerStats(String playerId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
+            //session = sf.getCurrentSession();
+
             session = sf.openSession();
 
             tx = session.beginTransaction();
@@ -104,11 +110,6 @@ public class DataDB {
             String fSql = String.format("SELECT foul_on, foul_time, match_id FROM match_foul WHERE commited_by = \'%s\' ORDER BY id;", playerId);
             String gSql = String.format("SELECT goal_type, goal_time, match_id FROM match_goal WHERE scored_by = \'%s\' ORDER BY id;", playerId);
             String pSql = String.format("SELECT card_type, match_id FROM penalty_card WHERE awarded_to =\'%s\' ORDER BY id DESC;", playerId );
-
-            int foulsCount = 0;
-            int goalsCount = 0;
-            int redCards = 0;
-            int yellowCards = 0;
 
             Set<String> matches = new LinkedHashSet<String>();
 
@@ -175,14 +176,18 @@ public class DataDB {
 
             int i = 0;
 
+            FootDB f = new FootDB();
+
             for(String matchId : matches){
                 try {
                     String[] participants = new FootDB().getParticipants(matchId);
                     JSONObject matchData = new JSONObject();
-                    matchData.accumulate(participants[0] + " vs " + participants[1], new JSONObject("{ \'goals\' : \'" + Integer.toString(pGoals.get(matchId)) + "\'}"));
-                    matchData.accumulate(participants[0] + " vs " + participants[1], new JSONObject("{ \'fouls\' :\'" + Integer.toString(pFouls.get(matchId)) + "\' }"));
-                    matchData.accumulate(participants[0] + " vs " + participants[1], new JSONObject("{ \'yellow_cards\' : \'" + Integer.toString(yCards.get(matchId)) + "\'}"));
-                    matchData.accumulate(participants[0] + " vs " + participants[1], new JSONObject("{ \'red_cards\' : \'" + Integer.toString(rCards.get(matchId)) + "\'}"));
+                    String teamA = f.getTeamName(participants[0]);
+                    String teamB = f.getTeamName(participants[1]);
+                    matchData.accumulate(teamA + " vs " + teamB, new JSONObject("{ \'goals\' : \'" + Integer.toString(pGoals.get(matchId)) + "\'}"));
+                    matchData.accumulate(teamA + " vs " +  teamB, new JSONObject("{ \'fouls\' :\'" + Integer.toString(pFouls.get(matchId)) + "\' }"));
+                    matchData.accumulate(teamA + " vs " + teamB, new JSONObject("{ \'yellow_cards\' : \'" + Integer.toString(yCards.get(matchId)) + "\'}"));
+                    matchData.accumulate(teamA + " vs " + teamB, new JSONObject("{ \'red_cards\' : \'" + Integer.toString(rCards.get(matchId)) + "\'}"));
                     playerData.put(i++, matchData);
                 }
                 catch(Exception e){
@@ -194,7 +199,6 @@ public class DataDB {
 
             tx.commit();
 
-            session.close();
             sf.close();
             return playerData;
         }
@@ -207,16 +211,17 @@ public class DataDB {
     public void createEntryInLog(String matchId, String text, String eventType) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
+            //session = sf.getCurrentSession();
+
             session = sf.openSession();
 
             tx = session.beginTransaction();
             session.save(new EventFeed(matchId, text, eventType));
             tx.commit();
 
-            session.close();
             sf.close();
             String[] participants = new FootDB().getParticipants(matchId);
-            UserDB.notifySubscribers(String.format("%s vs %s", participants[0], participants[1]), text);
+//            UserDB.notifySubscribers(String.format("%s vs %s", participants[0], participants[1]), text);
         }
         catch (Exception e){
             e.printStackTrace();
@@ -229,7 +234,10 @@ public class DataDB {
 
             final String getGoals = String.format("SELECT team_id FROM match_goal WHERE match_id=\'%s\';", matchId);
 
+            //session = sf.getCurrentSession();
+
             session = sf.openSession();
+
             tx = session.beginTransaction();
 
             Map<String, Integer> goalCount = new LinkedHashMap<>();
@@ -280,7 +288,7 @@ public class DataDB {
             }
 
             tx.commit();
-            session.close();
+            sf.close();
 
             return verdict;
         }
@@ -293,6 +301,8 @@ public class DataDB {
     public JSONObject getMatchFeed(String matchId) throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
+            //session = sf.getCurrentSession();
+
             session = sf.openSession();
 
             tx = session.beginTransaction();
@@ -315,7 +325,6 @@ public class DataDB {
             }
             tx.commit();
 
-            session.close();
             sf.close();
 
             System.out.println(matchFeed.toString());
@@ -330,6 +339,7 @@ public class DataDB {
     public JSONArray getTopFeed() throws Exception {
         try {
             sf = new Configuration().configure().buildSessionFactory();
+            //session = sf.getCurrentSession();
             session = sf.openSession();
 
             tx = session.beginTransaction();
@@ -354,7 +364,6 @@ public class DataDB {
             }
             tx.commit();
 
-            session.close();
             sf.close();
 
             System.out.println(matchFeed.toString());
@@ -363,6 +372,50 @@ public class DataDB {
         catch (Exception e){
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public void archiveMatch(String matchId) {
+        try {
+            sf = new Configuration().configure().buildSessionFactory();
+            session = sf.openSession();
+
+            tx = session.beginTransaction();
+            String[] tables = {"event_feed", "match_foul", "match_goal", "penalty_card"};
+
+            for(String table : tables) {
+                final String nullifyMatch = String.format("UPDATE %s SET match_id=\'%s\' WHERE match_id=\'%s\';", table, "ARCHIVED", matchId);
+                session.createSQLQuery(nullifyMatch).executeUpdate();
+            }
+
+            tx.commit();
+            sf.close();
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void reapArchivedData() {
+        try {
+            sf = new Configuration().configure().buildSessionFactory();
+            session = sf.openSession();
+
+            tx = session.beginTransaction();
+            String[] tables = {"event_feed", "match_foul", "match_goal", "penalty_card"};
+
+            for(String table : tables) {
+                final String deleteMatch = String.format("DELETE FROM %S WHERE match_id=\'ARCHIVED\';", table);
+                session.createSQLQuery(deleteMatch).executeUpdate();
+            }
+
+            tx.commit();
+            sf.close();
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
@@ -378,7 +431,6 @@ public class DataDB {
             Object[] columns = (Object[]) row;
 
             tx.commit();
-            session.close();
             sf.close();
 
             if(columns[0].toString().equals(code))
