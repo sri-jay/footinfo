@@ -26,7 +26,7 @@ public class FootDB {
     private final String GET_TEAM_BY_LABEL_AND_NAME = "http://127.0.0.1:7474/db/data/label/TEAM/nodes";
 
     private enum Relationships implements RelationshipType {
-        PLAYS_FOR, VERSUS, LOST_TO
+        PLAYS_FOR, VERSUS
     }
 
     private enum NodeLabels {

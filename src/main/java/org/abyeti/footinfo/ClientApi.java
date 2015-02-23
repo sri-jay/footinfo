@@ -7,11 +7,9 @@ import org.joda.time.DateTime;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import javax.print.attribute.standard.MediaPrintableArea;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.crypto.Data;
 
 @Path("/api")
 public class ClientApi {

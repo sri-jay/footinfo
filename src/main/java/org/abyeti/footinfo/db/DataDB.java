@@ -221,7 +221,7 @@ public class DataDB {
 
             sf.close();
             String[] participants = new FootDB().getParticipants(matchId);
-//            UserDB.notifySubscribers(String.format("%s vs %s", participants[0], participants[1]), text);
+            UserDB.notifySubscribers(String.format("%s vs %s", participants[0], participants[1]), text);
         }
         catch (Exception e){
             e.printStackTrace();
